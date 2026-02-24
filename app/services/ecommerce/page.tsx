@@ -1,35 +1,11 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import type { Metadata } from 'next'
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import { ArrowRight, CheckCircle, Star, Clock, ShoppingCart, Zap, ThumbsUp, ChevronUp, ChevronDown, Package, Database, BarChart3, Headphones, DollarSign, Timer, Settings, ShieldCheck, TrendingUp, MessageSquare, Target } from 'lucide-react';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'E-commerce Virtual Assistant Services | TasksACE Product Management & Support',
-  description: 'Professional e-commerce virtual assistant services including product upload, image processing, inventory management, customer support, and product description writing. Scale your online business.',
-  keywords: 'e-commerce virtual assistant, product upload services, image processing, inventory management, customer support, product description writing, online store management',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'E-commerce Virtual Assistant Services | TasksACE Product Management & Support',
-    description: 'Professional e-commerce virtual assistant services including product upload, image processing, inventory management, customer support, and product description writing. Scale your online business.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-    url: 'https://tasksace.com/services/ecommerce',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'E-commerce Virtual Assistant Services | TasksACE',
-    description: 'Professional e-commerce support services. Product upload, image processing, inventory management, and customer support.',
-    creator: '@tasksace',
-  },
-}
 
 export default function EcommerceSolutionsPage() {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -88,7 +64,7 @@ export default function EcommerceSolutionsPage() {
     },
     {
       icon: Timer,
-      title: "Time Efficiency", 
+      title: "Time Efficiency",
       description: "Save 20+ hours per week with automated product uploads and inventory management.",
       highlight: "20+ Hours Saved",
       color: "from-blue-500 to-cyan-500"
@@ -124,7 +100,7 @@ export default function EcommerceSolutionsPage() {
       icon: MessageSquare
     },
     {
-      step: "02", 
+      step: "02",
       title: "Strategy Development",
       description: "We create a customized plan for product uploads, optimization, and ongoing management.",
       icon: Target
@@ -147,7 +123,7 @@ export default function EcommerceSolutionsPage() {
     {
       text: "TasksACE uploaded 2,500 products to our Shopify store flawlessly. Our sales increased by 40% within 3 months!",
       author: "Jennifer Martinez",
-      company: "FashionHub Store", 
+      company: "FashionHub Store",
       role: "Store Owner",
       rating: 5,
       service: "Product Upload & Listing"
@@ -158,7 +134,7 @@ export default function EcommerceSolutionsPage() {
       company: "TechGear Plus",
       role: "E-commerce Manager",
       rating: 5,
-      service: "Product Description Writing" 
+      service: "Product Description Writing"
     },
     {
       text: "Professional inventory management that prevented overselling during peak season. Highly recommended!",
@@ -172,7 +148,7 @@ export default function EcommerceSolutionsPage() {
       text: "Customer support service was exceptional. Our response time improved by 80% and customer satisfaction soared.",
       author: "Michael Rodriguez",
       company: "Sports Gear Pro",
-      role: "Customer Success Manager", 
+      role: "Customer Success Manager",
       rating: 5,
       service: "Customer Support"
     },
@@ -237,7 +213,7 @@ export default function EcommerceSolutionsPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Enhanced Hero Section */}
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         {/* Background effects */}
@@ -245,27 +221,27 @@ export default function EcommerceSolutionsPage() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center bg-primary-500/10 rounded-full px-4 py-2 mb-6 border border-primary-500/20">
                 <ShoppingCart className="w-4 h-4 text-primary-400 mr-2" />
                 <span className="text-primary-400 text-sm font-semibold">E-COMMERCE EXPERTISE</span>
               </div>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 Expert E-commerce Virtual Assistant Services
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
                 Professional product upload and management across Shopify, WooCommerce, Wix, and Magento. From bulk uploads to inventory management, we optimize your online store for maximum sales.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                                  <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Start Growing Today
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
@@ -274,7 +250,7 @@ export default function EcommerceSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-              
+
               {/* Trust indicators */}
               <div className="flex items-center gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -291,7 +267,7 @@ export default function EcommerceSolutionsPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Right Side Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -302,7 +278,7 @@ export default function EcommerceSolutionsPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">E-commerce Excellence</h3>
                   <p className="text-gray-300">Complete solutions for your online store</p>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {['Product Upload & Listing', 'Inventory Management', 'Customer Support', 'Platform Migration', 'Sales Optimization'].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
@@ -311,7 +287,7 @@ export default function EcommerceSolutionsPage() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="text-center">
                   <Link href="#services" className="inline-flex items-center text-primary-400 hover:text-primary-300 font-semibold transition-colors duration-300">
                     View All Services
@@ -319,7 +295,7 @@ export default function EcommerceSolutionsPage() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-primary-500 to-orange-500 rounded-full opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-40"></div>
@@ -365,11 +341,10 @@ export default function EcommerceSolutionsPage() {
               <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 hover:border-green-300 transition-all duration-300 hover:shadow-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-bold text-gray-900">{platform.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    platform.expertise === 'Expert' 
-                      ? 'bg-green-100 text-green-700' 
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${platform.expertise === 'Expert'
+                      ? 'bg-green-100 text-green-700'
                       : 'bg-blue-100 text-blue-700'
-                  }`}>
+                    }`}>
                     {platform.expertise}
                   </span>
                 </div>
@@ -420,20 +395,20 @@ export default function EcommerceSolutionsPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="relative">
                     <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div className="space-y-3 mb-6">
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -448,7 +423,7 @@ export default function EcommerceSolutionsPage() {
                         </div>
                       )}
                     </div>
-                    
+
                     <div className="pt-4 border-t border-gray-200 group-hover:border-primary-200 transition-colors duration-300">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-primary-600 text-sm font-medium group-hover:text-primary-700 transition-colors duration-300">
@@ -492,11 +467,11 @@ export default function EcommerceSolutionsPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-bold mb-3 inline-block">
                     {benefit.highlight}
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
@@ -511,7 +486,7 @@ export default function EcommerceSolutionsPage() {
         {/* Background decorations */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-100/20 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
@@ -529,7 +504,7 @@ export default function EcommerceSolutionsPage() {
           <div className="relative">
             {/* Top connecting line */}
             <div className="hidden md:block absolute top-5 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-green-500 via-blue-500 via-purple-500 to-red-500"></div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
                 const IconComponent = step.icon;
@@ -548,18 +523,18 @@ export default function EcommerceSolutionsPage() {
                         <div className={`w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg border-2 ${stepColors.border} relative z-10`}>
                           <span className={`text-sm font-bold ${stepColors.text}`}>{step.step}</span>
                         </div>
-                        
+
                         {/* Individual connecting lines between numbers */}
                         {index < processSteps.length - 1 && (
                           <div className={`hidden lg:block absolute top-5 left-1/2 w-full h-0.5 ${stepColors.border.replace('border-', 'bg-')} z-0`}></div>
                         )}
                       </div>
-                      
+
                       <div className={`w-20 h-20 bg-gradient-to-r ${stepColors.bg} rounded-full flex items-center justify-center mx-auto shadow-xl mb-6`}>
                         <IconComponent className="w-10 h-10 text-white" />
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
                   </div>
@@ -567,7 +542,7 @@ export default function EcommerceSolutionsPage() {
               })}
             </div>
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-primary-50 to-primary-50 rounded-3xl p-8 border border-primary-200">
@@ -605,7 +580,7 @@ export default function EcommerceSolutionsPage() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentTestimonialIndex * 100}%)` }}
               onMouseEnter={() => setCurrentTestimonialIndex(currentTestimonialIndex)}
@@ -638,15 +613,14 @@ export default function EcommerceSolutionsPage() {
                 </div>
               ))}
             </div>
-            
+
             {/* Dots indicator */}
             <div className="flex justify-center mt-8 space-x-2">
               {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    index === Math.floor(currentTestimonialIndex / 2) ? 'bg-primary-500' : 'bg-gray-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === Math.floor(currentTestimonialIndex / 2) ? 'bg-primary-500' : 'bg-gray-300'
+                    }`}
                   onClick={() => setCurrentTestimonialIndex(index * 2)}
                 />
               ))}
@@ -680,10 +654,9 @@ export default function EcommerceSolutionsPage() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-primary-500 transition-colors" />
                   )}
                 </button>
-                
-                <div className={`overflow-hidden transition-all duration-300 ease-out ${
-                  openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
-                }`}>
+
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
+                  }`}>
                   <div className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </div>
@@ -691,7 +664,7 @@ export default function EcommerceSolutionsPage() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Still have questions? We're here to help!</p>
             <Link href="/contact" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-300">
@@ -710,14 +683,14 @@ export default function EcommerceSolutionsPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Ready to Get Started?</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight whitespace-nowrap">
               Ready to Scale Your E-commerce?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join e-commerce businesses that have grown their sales and optimized operations with TasksACE experts.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Start Free Consultation
@@ -727,7 +700,7 @@ export default function EcommerceSolutionsPage() {
                 View All Services
               </Link>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">

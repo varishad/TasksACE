@@ -1,35 +1,13 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import type { Metadata } from 'next'
+
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, ThumbsUp, ChevronUp, ChevronDown, PenTool, Youtube, Search, Edit, Users, DollarSign, Timer, Target, Lightbulb, Settings, ShieldCheck } from 'lucide-react';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Digital Marketing Virtual Assistant Services | TasksACE SEO & Content Marketing',
-  description: 'Professional digital marketing virtual assistant services including SEO, content creation, social media management, keyword research, and YouTube optimization. Grow your online presence.',
-  keywords: 'digital marketing virtual assistant, SEO services, content creation, social media management, keyword research, YouTube optimization, online marketing',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Digital Marketing Virtual Assistant Services | TasksACE SEO & Content Marketing',
-    description: 'Professional digital marketing virtual assistant services including SEO, content creation, social media management, keyword research, and YouTube optimization. Grow your online presence.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-    url: 'https://tasksace.com/services/digital-marketing',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Digital Marketing Virtual Assistant Services | TasksACE',
-    description: 'Professional digital marketing services. SEO, content creation, social media management, and YouTube optimization.',
-    creator: '@tasksace',
-  },
-}
+
 
 export default function DigitalMarketingContentPage() {
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
@@ -237,7 +215,7 @@ export default function DigitalMarketingContentPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Enhanced Hero Section */}
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         {/* Background effects */}
@@ -245,25 +223,25 @@ export default function DigitalMarketingContentPage() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-orange-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-orange-500/3 to-red-500/3 rounded-full blur-3xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          
+
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center bg-orange-500/10 rounded-full px-4 py-2 mb-6 border border-orange-500/20">
                 <TrendingUp className="w-4 h-4 text-orange-400 mr-2" />
                 <span className="text-orange-400 text-sm font-semibold">MARKETING EXCELLENCE</span>
               </div>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 Professional Digital Marketing Services
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
                 Expert digital marketing and content creation services to grow your online presence. From compelling copywriting to YouTube SEO and keyword research, we drive real results.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact" className="group bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Start Growing Today
@@ -274,7 +252,7 @@ export default function DigitalMarketingContentPage() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-              
+
               {/* Trust indicators */}
               <div className="flex items-center gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -291,7 +269,7 @@ export default function DigitalMarketingContentPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Right Side Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -302,7 +280,7 @@ export default function DigitalMarketingContentPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Marketing Excellence</h3>
                   <p className="text-gray-300">Drive growth with proven strategies</p>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {['Copywriting', 'YouTube SEO', 'Content Creation', 'Social Media Management', 'Keyword Research'].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
@@ -311,7 +289,7 @@ export default function DigitalMarketingContentPage() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="text-center">
                   <Link href="#services" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-semibold transition-colors duration-300">
                     View All Services
@@ -319,7 +297,7 @@ export default function DigitalMarketingContentPage() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-red-500 to-pink-500 rounded-full opacity-40"></div>
@@ -365,11 +343,10 @@ export default function DigitalMarketingContentPage() {
               <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 hover:border-orange-300 transition-all duration-300 hover:shadow-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-bold text-gray-900">{tool.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                    tool.expertise === 'Expert' 
-                      ? 'bg-orange-100 text-orange-700' 
-                      : 'bg-blue-100 text-blue-700'
-                  }`}>
+                  <span className={`px-3 py-1 rounded-full text-sm font-semibold ${tool.expertise === 'Expert'
+                    ? 'bg-orange-100 text-orange-700'
+                    : 'bg-blue-100 text-blue-700'
+                    }`}>
                     {tool.expertise}
                   </span>
                 </div>
@@ -420,20 +397,20 @@ export default function DigitalMarketingContentPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="relative">
                     <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div className="space-y-3 mb-6">
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -448,7 +425,7 @@ export default function DigitalMarketingContentPage() {
                         </div>
                       )}
                     </div>
-                    
+
                     <div className="pt-4 border-t border-gray-200 group-hover:border-primary-200 transition-colors duration-300">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-primary-600 text-sm font-medium group-hover:text-primary-700 transition-colors duration-300">
@@ -492,11 +469,11 @@ export default function DigitalMarketingContentPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-bold mb-3 inline-block">
                     {benefit.highlight}
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
@@ -511,7 +488,7 @@ export default function DigitalMarketingContentPage() {
         {/* Background decorations */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-100/20 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
@@ -529,7 +506,7 @@ export default function DigitalMarketingContentPage() {
           <div className="relative">
             {/* Top connecting line */}
             <div className="hidden md:block absolute top-5 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-green-500 via-blue-500 via-purple-500 to-red-500"></div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
                 const IconComponent = step.icon;
@@ -548,18 +525,18 @@ export default function DigitalMarketingContentPage() {
                         <div className={`w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg border-2 ${stepColors.border} relative z-10`}>
                           <span className={`text-sm font-bold ${stepColors.text}`}>{step.step}</span>
                         </div>
-                        
+
                         {/* Individual connecting lines between numbers */}
                         {index < processSteps.length - 1 && (
                           <div className={`hidden lg:block absolute top-5 left-1/2 w-full h-0.5 ${stepColors.border.replace('border-', 'bg-')} z-0`}></div>
                         )}
                       </div>
-                      
+
                       <div className={`w-20 h-20 bg-gradient-to-r ${stepColors.bg} rounded-full flex items-center justify-center mx-auto shadow-xl mb-6`}>
                         <IconComponent className="w-10 h-10 text-white" />
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
                   </div>
@@ -567,7 +544,7 @@ export default function DigitalMarketingContentPage() {
               })}
             </div>
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-primary-50 to-primary-50 rounded-3xl p-8 border border-primary-200">
@@ -605,7 +582,7 @@ export default function DigitalMarketingContentPage() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentTestimonialIndex * 100}%)` }}
               onMouseEnter={() => setCurrentTestimonialIndex(currentTestimonialIndex)}
@@ -638,15 +615,14 @@ export default function DigitalMarketingContentPage() {
                 </div>
               ))}
             </div>
-            
+
             {/* Dots indicator */}
             <div className="flex justify-center mt-8 space-x-2">
               {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    index === Math.floor(currentTestimonialIndex / 2) ? 'bg-primary-500' : 'bg-gray-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === Math.floor(currentTestimonialIndex / 2) ? 'bg-primary-500' : 'bg-gray-300'
+                    }`}
                   onClick={() => setCurrentTestimonialIndex(index * 2)}
                 />
               ))}
@@ -680,10 +656,9 @@ export default function DigitalMarketingContentPage() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-primary-500 transition-colors" />
                   )}
                 </button>
-                
-                <div className={`overflow-hidden transition-all duration-300 ease-out ${
-                  openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
-                }`}>
+
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
+                  }`}>
                   <div className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </div>
@@ -691,7 +666,7 @@ export default function DigitalMarketingContentPage() {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Ready to boost your digital presence?</p>
             <Link href="/contact" className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors duration-300">
@@ -710,14 +685,14 @@ export default function DigitalMarketingContentPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Growth Awaits</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight whitespace-nowrap">
               Ready to Amplify Your Digital Reach?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Partner with us to create compelling content and marketing strategies that drive engagement and grow your business.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Launch Your Campaign
@@ -727,7 +702,7 @@ export default function DigitalMarketingContentPage() {
                 View All Services
               </Link>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">

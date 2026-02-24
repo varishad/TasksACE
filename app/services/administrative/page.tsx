@@ -1,41 +1,19 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import type { Metadata } from 'next'
+
 import Header from '../../../components/Header'
 import Footer from '../../../components/Footer'
 import { ArrowRight, CheckCircle, Star, Clock, ClipboardList, Zap, ThumbsUp, ChevronDown, ChevronUp, Settings, Database, Mail, Calendar, DollarSign, TrendingUp, ShieldCheck, Award, MessageSquare, Target } from 'lucide-react';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Administrative Virtual Assistant Services | TasksACE Professional Business Support',
-  description: 'Professional administrative virtual assistant services including back-office support, data entry, email management, calendar scheduling, and VA support. Streamline your business operations.',
-  keywords: 'administrative virtual assistant, back office support, data entry services, email management, calendar scheduling, VA support, business administration',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Administrative Virtual Assistant Services | TasksACE Professional Business Support',
-    description: 'Professional administrative virtual assistant services including back-office support, data entry, email management, calendar scheduling, and VA support. Streamline your business operations.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-    url: 'https://tasksace.com/services/administrative',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Administrative Virtual Assistant Services | TasksACE',
-    description: 'Professional administrative support services. Back-office, data entry, email management, and calendar scheduling.',
-    creator: '@tasksace',
-  },
-}
+
 
 export default function AdministrativeServicesPage() {
   const [openFAQ, setOpenFAQ] = useState(0);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  
+
   // Auto-scroll for testimonials
   useEffect(() => {
     if (!isHovered) {
@@ -45,7 +23,7 @@ export default function AdministrativeServicesPage() {
       return () => clearInterval(interval);
     }
   }, [isHovered]);
-  
+
   const adminServices = [
     {
       title: "Back-Office Solutions",
@@ -170,7 +148,7 @@ export default function AdministrativeServicesPage() {
       text: "Their data entry services are incredibly accurate and fast. We processed 10,000+ records flawlessly.",
       author: "Sarah Williams",
       company: "DataFlow Inc.",
-      role: "Operations Manager", 
+      role: "Operations Manager",
       rating: 5,
       savings: "100% accuracy rate",
       timeframe: "4 months"
@@ -239,7 +217,7 @@ export default function AdministrativeServicesPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Enhanced Hero Section */}
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         {/* Background effects */}
@@ -247,7 +225,7 @@ export default function AdministrativeServicesPage() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -255,15 +233,15 @@ export default function AdministrativeServicesPage() {
                 <ClipboardList className="w-4 h-4 text-primary-400 mr-2" />
                 <span className="text-primary-400 text-sm font-semibold">ADMINISTRATIVE EXCELLENCE</span>
               </div>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 Professional Administrative Assistant Services
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
                 Focus on growing your business while we handle all your administrative tasks with precision and professionalism. From back-office solutions to data management, we're your trusted administrative partner.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Get Started Today
@@ -274,7 +252,7 @@ export default function AdministrativeServicesPage() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-              
+
               {/* Trust indicators */}
               <div className="flex items-center gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -291,7 +269,7 @@ export default function AdministrativeServicesPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Right Side Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -302,7 +280,7 @@ export default function AdministrativeServicesPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Complete Admin Support</h3>
                   <p className="text-gray-300">Professional solutions for all your business needs</p>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {['Back-Office Solutions', 'Data Management', 'Email Organization', 'Calendar Scheduling', 'Virtual Assistance'].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
@@ -311,9 +289,9 @@ export default function AdministrativeServicesPage() {
                     </div>
                   ))}
                 </div>
-                
 
-                
+
+
                 <div className="text-center">
                   <Link href="#services" className="inline-flex items-center text-primary-400 hover:text-primary-300 font-semibold transition-colors duration-300">
                     View All Services
@@ -321,7 +299,7 @@ export default function AdministrativeServicesPage() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-primary-500 to-orange-500 rounded-full opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-40"></div>
@@ -391,20 +369,20 @@ export default function AdministrativeServicesPage() {
                       </div>
                     </div>
                   )}
-                  
+
                   <div className="relative">
                     <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <div className="space-y-3 mb-6">
                       <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -419,7 +397,7 @@ export default function AdministrativeServicesPage() {
                         </div>
                       )}
                     </div>
-                    
+
                     <div className="pt-4 border-t border-gray-200 group-hover:border-primary-200 transition-colors duration-300">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 text-primary-600 text-sm font-medium group-hover:text-primary-700 transition-colors duration-300">
@@ -463,11 +441,11 @@ export default function AdministrativeServicesPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-bold mb-3 inline-block">
                     {benefit.highlight}
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
@@ -482,7 +460,7 @@ export default function AdministrativeServicesPage() {
         {/* Background decorations */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
@@ -500,7 +478,7 @@ export default function AdministrativeServicesPage() {
           <div className="relative">
             {/* Top connecting line */}
             <div className="hidden md:block absolute top-5 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-green-500 via-blue-500 via-purple-500 to-red-500"></div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
                 const IconComponent = step.icon;
@@ -516,20 +494,20 @@ export default function AdministrativeServicesPage() {
                     <div className="relative mb-8">
                       {/* Number circle with connector line */}
                       <div className={`w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg border-2 ${stepColors.border} relative z-10`}>
-                          <span className={`text-sm font-bold ${stepColors.text}`}>{step.step}</span>
-                        </div>
-                        
-                        {/* Individual connecting lines between numbers */}
-                        {index < processSteps.length - 1 && (
-                          <div className={`hidden lg:block absolute top-5 left-1/2 w-full h-0.5 ${stepColors.border.replace('border-', 'bg-')} z-0`}></div>
-                        )}
+                        <span className={`text-sm font-bold ${stepColors.text}`}>{step.step}</span>
                       </div>
-                      
-                      <div className={`w-20 h-20 bg-gradient-to-r ${stepColors.bg} rounded-full flex items-center justify-center mx-auto shadow-xl mb-6`}>
-                        <IconComponent className="w-10 h-10 text-white" />
-                      </div>
+
+                      {/* Individual connecting lines between numbers */}
+                      {index < processSteps.length - 1 && (
+                        <div className={`hidden lg:block absolute top-5 left-1/2 w-full h-0.5 ${stepColors.border.replace('border-', 'bg-')} z-0`}></div>
+                      )}
                     </div>
-                    
+
+                    <div className={`w-20 h-20 bg-gradient-to-r ${stepColors.bg} rounded-full flex items-center justify-center mx-auto shadow-xl mb-6`}>
+                      <IconComponent className="w-10 h-10 text-white" />
+                    </div>
+
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
                   </div>
@@ -537,7 +515,7 @@ export default function AdministrativeServicesPage() {
               })}
             </div>
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-primary-50 to-orange-50 rounded-3xl p-8 border border-primary-200">
@@ -575,7 +553,7 @@ export default function AdministrativeServicesPage() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               onMouseEnter={() => setIsHovered(true)}
@@ -591,18 +569,18 @@ export default function AdministrativeServicesPage() {
                             <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        
+
                         <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
                           "{testimonial.text}"
                         </blockquote>
-                        
+
                         <div className="flex items-center justify-between mb-4">
                           <div>
                             <div className="font-bold text-gray-900">{testimonial.author}</div>
                             <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                           </div>
                         </div>
-                        
+
                         <div className="flex gap-4">
                           <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
                             {testimonial.savings}
@@ -617,16 +595,15 @@ export default function AdministrativeServicesPage() {
                 </div>
               ))}
             </div>
-            
+
             {/* Testimonial indicators */}
             <div className="flex justify-center mt-8 gap-2">
               {Array.from({ length: Math.ceil(testimonials.length / 2) }, (_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    currentTestimonial === index ? 'bg-primary-500' : 'bg-gray-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${currentTestimonial === index ? 'bg-primary-500' : 'bg-gray-300'
+                    }`}
                 />
               ))}
             </div>
@@ -659,10 +636,9 @@ export default function AdministrativeServicesPage() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-orange-500 transition-colors" />
                   )}
                 </button>
-                
-                <div className={`overflow-hidden transition-all duration-300 ease-out ${
-                  openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
-                }`}>
+
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
+                  }`}>
                   <div className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </div>
@@ -670,7 +646,7 @@ export default function AdministrativeServicesPage() {
               </div>
             ))}
           </div>
-          
+
           {/* Additional CTA at bottom of FAQ */}
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Still have questions? We're here to help!</p>
@@ -690,14 +666,14 @@ export default function AdministrativeServicesPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Ready to Get Started?</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight whitespace-nowrap">
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join successful businesses that have transformed their operations with TasksACE administrative solutions.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Start Free Consultation
@@ -707,7 +683,7 @@ export default function AdministrativeServicesPage() {
                 View All Services
               </Link>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">
@@ -729,6 +705,6 @@ export default function AdministrativeServicesPage() {
       </section>
 
       <Footer />
-    </main>
+    </main >
   )
 } 

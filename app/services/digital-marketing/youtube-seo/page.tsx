@@ -1,41 +1,19 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import type { Metadata } from 'next'
+
 import Header from '../../../../components/Header'
 import Footer from '../../../../components/Footer'
 import { ArrowRight, CheckCircle, Star, Clock, Youtube, Zap, ThumbsUp, ShieldCheck, ChevronDown, ChevronUp, Search, Layout, BarChart3, MessageSquare, TrendingUp, Users, DollarSign, Video } from 'lucide-react';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'YouTube SEO Virtual Assistant Services | TasksACE Video Optimization & Growth',
-  description: 'Professional YouTube SEO virtual assistant services including video optimization, keyword research, channel optimization, and analytics. Grow your YouTube channel with expert SEO strategies.',
-  keywords: 'YouTube SEO virtual assistant, video optimization, YouTube keyword research, channel optimization, YouTube analytics, video SEO services',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'YouTube SEO Virtual Assistant Services | TasksACE Video Optimization & Growth',
-    description: 'Professional YouTube SEO virtual assistant services including video optimization, keyword research, channel optimization, and analytics. Grow your YouTube channel with expert SEO strategies.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-    url: 'https://tasksace.com/services/digital-marketing/youtube-seo',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'YouTube SEO Virtual Assistant Services | TasksACE',
-    description: 'Professional YouTube SEO services. Video optimization, keyword research, channel optimization, and analytics.',
-    creator: '@tasksace',
-  },
-}
+
 
 export default function YouTubeSEOPage() {
   const [openFAQ, setOpenFAQ] = useState(0); // Start with first FAQ open
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-  
+
   // Auto-scroll for testimonials
   useEffect(() => {
     if (!isHovered) {
@@ -45,7 +23,7 @@ export default function YouTubeSEOPage() {
       return () => clearInterval(interval);
     }
   }, [isHovered]);
-  
+
   const youtubeSEOServices = [
     {
       title: "Video Optimization",
@@ -281,7 +259,7 @@ export default function YouTubeSEOPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Enhanced Hero Section */}
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         {/* Background effects */}
@@ -289,7 +267,7 @@ export default function YouTubeSEOPage() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -297,15 +275,15 @@ export default function YouTubeSEOPage() {
                 <Youtube className="w-4 h-4 text-primary-400 mr-2" />
                 <span className="text-primary-400 text-sm font-semibold">YOUTUBE SEO EXPERTS</span>
               </div>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 YouTube SEO Services
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
                 Dominate YouTube search results and grow your channel exponentially. Our proven SEO strategies help creators rank higher, gain more subscribers, and increase revenue.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Grow My Channel
@@ -316,7 +294,7 @@ export default function YouTubeSEOPage() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-              
+
               {/* Trust indicators */}
               <div className="flex items-center gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -333,7 +311,7 @@ export default function YouTubeSEOPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Right Side Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -344,7 +322,7 @@ export default function YouTubeSEOPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Complete YouTube SEO</h3>
                   <p className="text-gray-300">Dominate search results</p>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {['Video Optimization', 'Keyword Research', 'Channel Setup', 'Analytics Tracking', 'Growth Strategy'].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
@@ -353,14 +331,14 @@ export default function YouTubeSEOPage() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="bg-white/5 rounded-lg p-4 mb-6">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-white mb-1">Starting at $150/video</div>
                     <div className="text-primary-400 text-sm">Complete optimization</div>
                   </div>
                 </div>
-                
+
                 <div className="text-center">
                   <Link href="#pricing" className="inline-flex items-center text-primary-400 hover:text-primary-300 font-semibold transition-colors duration-300">
                     View All Plans
@@ -368,7 +346,7 @@ export default function YouTubeSEOPage() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-primary-500 to-orange-500 rounded-full opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-40"></div>
@@ -418,11 +396,11 @@ export default function YouTubeSEOPage() {
                     <div className="w-16 h-16 bg-gradient-to-r from-primary-500 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg flex-shrink-0">
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
-                    
+
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
                       <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                      
+
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
                           <h4 className="text-sm font-semibold text-gray-900 mb-2">Features:</h4>
@@ -435,7 +413,7 @@ export default function YouTubeSEOPage() {
                             ))}
                           </ul>
                         </div>
-                        
+
                         <div>
                           <h4 className="text-sm font-semibold text-gray-900 mb-2">Deliverables:</h4>
                           <ul className="space-y-1">
@@ -477,11 +455,11 @@ export default function YouTubeSEOPage() {
                   <div className={`w-16 h-16 bg-gradient-to-r ${benefit.color} rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg`}>
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <div className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-bold mb-3 inline-block">
                     {benefit.metric}
                   </div>
-                  
+
                   <h3 className="text-lg font-bold text-gray-900 mb-2">{benefit.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
                 </div>
@@ -505,11 +483,10 @@ export default function YouTubeSEOPage() {
 
           <div className="grid lg:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`relative bg-white rounded-3xl p-8 shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${
-                plan.popular 
-                  ? 'border-primary-500 transform scale-105' 
-                  : 'border-gray-200 hover:border-primary-300'
-              }`}>
+              <div key={index} className={`relative bg-white rounded-3xl p-8 shadow-xl border-2 transition-all duration-300 hover:shadow-2xl ${plan.popular
+                ? 'border-primary-500 transform scale-105'
+                : 'border-gray-200 hover:border-primary-300'
+                }`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-primary-500 to-orange-500 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
@@ -517,14 +494,14 @@ export default function YouTubeSEOPage() {
                     </div>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                   <div className="text-4xl font-bold text-primary-600 mb-2">{plan.price}</div>
                   <div className="text-sm text-gray-500 mb-4">{plan.minHours}</div>
                   <p className="text-gray-600">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start gap-3">
@@ -533,14 +510,13 @@ export default function YouTubeSEOPage() {
                     </li>
                   ))}
                 </ul>
-                
-                <Link 
-                  href="/contact" 
-                  className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-300 text-center block ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                  }`}
+
+                <Link
+                  href="/contact"
+                  className={`w-full py-4 px-6 rounded-xl font-semibold transition-all duration-300 text-center block ${plan.popular
+                    ? 'bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white shadow-lg hover:shadow-xl transform hover:-translate-y-1'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                    }`}
                 >
                   {plan.buttonText}
                 </Link>
@@ -555,7 +531,7 @@ export default function YouTubeSEOPage() {
         {/* Background decorations */}
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
@@ -573,7 +549,7 @@ export default function YouTubeSEOPage() {
           <div className="relative">
             {/* Top connecting line */}
             <div className="hidden md:block absolute top-5 left-1/2 transform -translate-x-1/2 w-3/4 h-0.5 bg-gradient-to-r from-green-500 via-blue-500 via-purple-500 to-red-500"></div>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {processSteps.map((step, index) => {
                 const IconComponent = step.icon;
@@ -592,21 +568,21 @@ export default function YouTubeSEOPage() {
                         <div className={`w-10 h-10 bg-white rounded-full flex items-center justify-center mx-auto shadow-lg border-2 ${stepColors.border} relative z-10`}>
                           <span className={`text-sm font-bold ${stepColors.text}`}>{step.step}</span>
                         </div>
-                        
+
                         {/* Individual connecting lines between numbers */}
                         {index < processSteps.length - 1 && (
                           <div className={`hidden lg:block absolute top-5 left-1/2 w-full h-0.5 ${stepColors.border.replace('border-', 'bg-')} z-0`}></div>
                         )}
                       </div>
-                      
+
                       <div className={`w-20 h-20 bg-gradient-to-r ${stepColors.bg} rounded-full flex items-center justify-center mx-auto shadow-xl mb-6`}>
                         <IconComponent className="w-10 h-10 text-white" />
                       </div>
                     </div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4">{step.title}</h3>
                     <p className="text-gray-600 leading-relaxed mb-4">{step.description}</p>
-                    
+
                     {/* Duration Badge */}
                     <div className={`inline-flex items-center bg-gradient-to-r ${stepColors.badge} rounded-full px-4 py-2 border ${stepColors.badgeBorder}`}>
                       <Clock className={`w-4 h-4 ${stepColors.text} mr-2`} />
@@ -617,7 +593,7 @@ export default function YouTubeSEOPage() {
               })}
             </div>
           </div>
-          
+
           {/* Bottom CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-to-r from-primary-50 to-orange-50 rounded-3xl p-8 border border-primary-200">
@@ -655,7 +631,7 @@ export default function YouTubeSEOPage() {
           </div>
 
           <div className="relative overflow-hidden">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
               onMouseEnter={() => setIsHovered(true)}
@@ -671,18 +647,18 @@ export default function YouTubeSEOPage() {
                             <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                           ))}
                         </div>
-                        
+
                         <blockquote className="text-lg text-gray-700 mb-6 leading-relaxed italic">
                           "{testimonial.text}"
                         </blockquote>
-                        
+
                         <div className="flex items-center justify-between mb-4">
                           <div>
                             <div className="font-bold text-gray-900">{testimonial.author}</div>
                             <div className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</div>
                           </div>
                         </div>
-                        
+
                         <div className="flex gap-4">
                           <div className="bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
                             {testimonial.savings}
@@ -697,16 +673,15 @@ export default function YouTubeSEOPage() {
                 </div>
               ))}
             </div>
-            
+
             {/* Testimonial indicators */}
             <div className="flex justify-center mt-8 gap-2">
               {Array.from({ length: Math.ceil(testimonials.length / 2) }, (_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentTestimonial(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    currentTestimonial === index ? 'bg-primary-500' : 'bg-gray-300'
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${currentTestimonial === index ? 'bg-primary-500' : 'bg-gray-300'
+                    }`}
                 />
               ))}
             </div>
@@ -739,10 +714,9 @@ export default function YouTubeSEOPage() {
                     <ChevronDown className="w-5 h-5 text-gray-400 flex-shrink-0 group-hover:text-orange-500 transition-colors" />
                   )}
                 </button>
-                
-                <div className={`overflow-hidden transition-all duration-300 ease-out ${
-                  openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
-                }`}>
+
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${openFAQ === index ? 'max-h-screen opacity-100 pb-6' : 'max-h-0 opacity-0'
+                  }`}>
                   <div className="text-gray-600 leading-relaxed">
                     {faq.answer}
                   </div>
@@ -750,7 +724,7 @@ export default function YouTubeSEOPage() {
               </div>
             ))}
           </div>
-          
+
           {/* Additional CTA at bottom of FAQ */}
           <div className="text-center mt-12">
             <p className="text-gray-600 mb-4">Still have questions? We're here to help!</p>
@@ -770,14 +744,14 @@ export default function YouTubeSEOPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Ready to Grow?</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Ready to Dominate YouTube Search?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join hundreds of content creators who have grown their channels with TasksACE's proven YouTube SEO services.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Grow My Channel
@@ -787,7 +761,7 @@ export default function YouTubeSEOPage() {
                 View All Services
               </Link>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">
