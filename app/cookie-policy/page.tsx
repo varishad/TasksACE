@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { Cookie, Globe, Shield, BarChart3, Settings, Eye } from 'lucide-react';
 
 export const metadata: Metadata = {

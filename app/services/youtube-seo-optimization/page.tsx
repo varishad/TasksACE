@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react'
 
-import Header from '../../../../components/Header'
-import Footer from '../../../../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ArrowRight, CheckCircle, Star, Clock, Youtube, Zap, ThumbsUp, ShieldCheck, ChevronDown, ChevronUp, Search, Layout, BarChart3, MessageSquare, TrendingUp, Users, DollarSign, Video } from 'lucide-react';
 import Link from 'next/link'
 

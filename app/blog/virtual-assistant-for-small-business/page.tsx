@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import Header from '../../../components/Header'
+import Header from '@/components/Header'
 import { ArrowRight, ChevronRight, ThumbsUp, Share2, MessageCircle, User, ChevronDown, Facebook, Linkedin, Twitter } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'

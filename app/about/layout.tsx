@@ -2,13 +2,6 @@ import { generateDynamicMetadata } from '@/lib/seo'
 import React from 'react'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'About TasksACE - Your Trusted Virtual Assistant Partner',
-  description: 'Learn about TasksACE, a leading virtual assistant company founded in 2020. Meet our team, mission, and values. 386+ projects completed, 26+ happy clients, 99.9% success rate.',
-  keywords: 'about TasksACE, virtual assistant company, our team, company mission, business values, professional VA services, reliable virtual assistants',
-}
-
-
 export async function generateMetadata() {
   return await generateDynamicMetadata('/about')
 }

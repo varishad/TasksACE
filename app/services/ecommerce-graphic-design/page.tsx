@@ -1,8 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import Header from '../../../../components/Header'
-import Footer from '../../../../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ArrowRight, CheckCircle, Star, Clock, ShoppingCart, Zap, ThumbsUp, ShieldCheck, ChevronDown, ChevronUp, Image, Layout, Target, Package, MessageSquare, BarChart3, DollarSign, TrendingUp } from 'lucide-react';
 import Link from 'next/link'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../../components/Header'
-import Footer from '../../../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { ShoppingCart, CheckCircle, Package, BarChart3, MessageSquare } from 'lucide-react';
 import Link from 'next/link'
 

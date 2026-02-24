@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 import { Users, Clock, ArrowRight, CheckCircle, Settings, Star, ClipboardList, ShoppingCart, Palette, TrendingUp, Code, Zap, Headphones } from 'lucide-react';
 import Link from 'next/link'
 
@@ -21,6 +21,10 @@ export default function ServicesPage() {
     4: '/services/web-development'
   }
 
+  const getServiceCategoryLink = (index: number, name: string) => {
+    return serviceLinks[index as keyof typeof serviceLinks] || '/services'
+  }
+
   // Helper function to get individual service page links
   const getIndividualServiceLink = (categoryIndex: number, serviceName: string) => {
     // URL mapping based on new flat SEO slugs
@@ -38,7 +42,7 @@ export default function ServicesPage() {
       'Product Image Processing': '/services/product-image-editing',
       'Inventory Management': '/services/ecommerce-inventory-management',
       'Customer Support': '/services/ecommerce-customer-support',
-      'E-commerce Virtual Assistant': '/services/ecommerce-assistant-services',
+      'E-commerce Virtual Assistant': '/services/ecommerce-assistant',
 
       // Creative & Design Services
       'Graphic Design (Canva)': '/services/professional-canva-design',

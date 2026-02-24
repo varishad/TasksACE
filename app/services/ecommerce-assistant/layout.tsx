@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { generateDynamicMetadata } from '@/lib/seo'
 
 export async function generateMetadata() {
-  return await generateDynamicMetadata('/services/ecommerce-assistant-services')
+  return await generateDynamicMetadata('/services/ecommerce-assistant')
 }
 
 export default function EcommerceAssistantLayout({
@@ -24,7 +24,7 @@ export default function EcommerceAssistantLayout({
               "@type": "Service",
               "name": "E-commerce Assistant Services",
               "description": "Dedicated e-commerce virtual assistant services for comprehensive online store management, customer support, and business growth.",
-              "url": "https://tasksace.com/services/ecommerce-assistant-services",
+              "url": "https://tasksace.com/services/ecommerce-assistant",
               "provider": {
                 "@type": "Organization",
                 "name": "TasksACE",
@@ -133,7 +133,7 @@ export default function EcommerceAssistantLayout({
                     "@type": "ListItem",
                     "position": 3,
                     "name": "E-commerce Assistant",
-                    "item": "https://tasksace.com/services/ecommerce-assistant-services"
+                    "item": "https://tasksace.com/services/ecommerce-assistant"
                   }
                 ]
               }
