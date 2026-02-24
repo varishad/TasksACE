@@ -5,64 +5,63 @@ import Footer from '../../components/Footer'
 import { Users, Clock, ArrowRight, CheckCircle, Settings, Star, ClipboardList, ShoppingCart, Palette, TrendingUp, Code, Zap, Headphones } from 'lucide-react';
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'Virtual Assistant Services | TasksACE Professional Business Support',
-  description: 'Comprehensive virtual assistant services for business growth. Administrative support, e-commerce solutions, creative design, digital marketing, and web development.',
+import { generateDynamicMetadata } from '@/lib/seo'
+
+export async function generateMetadata() {
+  return await generateDynamicMetadata('/services')
 }
 
 export default function ServicesPage() {
   // Helper function to get correct service category links
-  const getServiceCategoryLink = (categoryIndex: number, categoryName: string) => {
-    const serviceLinks = {
-      0: '/services/administrative',
-      1: '/services/ecommerce', 
-      2: '/services/creative-design',
-      3: '/services/digital-marketing',
-      4: '/services/web-development'
-    }
-    return serviceLinks[categoryIndex as keyof typeof serviceLinks] || '/services'
+  const serviceLinks = {
+    0: '/services/administrative',
+    1: '/services/ecommerce',
+    2: '/services/creative-design',
+    3: '/services/digital-marketing',
+    4: '/services/web-development'
   }
 
   // Helper function to get individual service page links
   const getIndividualServiceLink = (categoryIndex: number, serviceName: string) => {
-    // URL mapping based on URL-Slug-Documentation.md
+    // URL mapping based on new flat SEO slugs
     const serviceUrlMap: { [key: string]: string } = {
       // Administrative Services
-      'Back-Office Solutions': '/services/administrative/back-office',
-      'Data Entry & Management': '/services/administrative/data-entry',
-      'Virtual Assistant Support': '/services/administrative/va-support',
-      'Email Management': '/services/administrative/email-management',
-      'Calendar & Scheduling': '/services/administrative/calendar',
-      
+      'Back-Office Solutions': '/services/back-office-solutions',
+      'Data Entry & Management': '/services/data-entry-specialists',
+      'Virtual Assistant Support': '/services/virtual-assistant-support',
+      'Email Management': '/services/email-management-solutions',
+      'Calendar & Scheduling': '/services/calendar-management-services',
+
       // E-commerce Services
-      'Product Upload & Listing': '/services/ecommerce/product-upload',
-      'Product Description Writing': '/services/ecommerce/product-description',
-      'Product Image Processing': '/services/ecommerce/image-processing',
-      'Inventory Management': '/services/ecommerce/inventory',
-      'Customer Support': '/services/ecommerce/customer-support',
-      
+      'Product Upload & Listing': '/services/ecommerce-product-listing',
+      'Product Description Writing': '/services/product-description-writing',
+      'Product Image Processing': '/services/product-image-editing',
+      'Inventory Management': '/services/ecommerce-inventory-management',
+      'Customer Support': '/services/ecommerce-customer-support',
+      'E-commerce Virtual Assistant': '/services/ecommerce-assistant-services',
+
       // Creative & Design Services
-      'Graphic Design (Canva)': '/services/creative-design/canva-design',
-      'Business Materials Design': '/services/creative-design/business-materials',
-      'E-commerce Graphics': '/services/creative-design/ecommerce-graphics',
-      'Basic Video Editing': '/services/creative-design/video-editing',
-      'Social Media Content': '/services/creative-design/social-media-content',
-      
+      'Graphic Design (Canva)': '/services/professional-canva-design',
+      'Business Materials Design': '/services/business-branding-materials',
+      'E-commerce Graphics': '/services/ecommerce-graphic-design',
+      'Basic Video Editing': '/services/video-editing-solutions',
+      'Social Media Content': '/services/social-media-graphics',
+
       // Digital Marketing Services
-      'Copywriting': '/services/digital-marketing/copywriting',
-      'YouTube SEO': '/services/digital-marketing/youtube-seo',
-      'Keyword Research': '/services/digital-marketing/keyword-research',
-      'Content Creation': '/services/digital-marketing/content',
-      'Social Media Management': '/services/digital-marketing/social-media',
-      
+      'Copywriting': '/services/copywriting-services',
+      'YouTube SEO': '/services/youtube-seo-optimization',
+      'Keyword Research': '/services/keyword-research-services',
+      'Content Creation': '/services/content-marketing-solutions',
+      'Social Media Management': '/services/social-media-management',
+
       // Web Development Services
-      'Custom Website Creation': '/services/web-development/custom-websites',
-      'E-commerce Website Development': '/services/web-development/ecommerce-websites',
-      'Small Tool Development': '/services/web-development/tools',
-      'Landing Page Creation': '/services/web-development/landing-pages',
-      'Website Maintenance': '/services/web-development/maintenance'
+      'Custom Website Creation': '/services/custom-website-development',
+      'E-commerce Website Development': '/services/ecommerce-website-design',
+      'Small Tool Development': '/services/web-development-tools',
+      'Landing Page Creation': '/services/high-converting-landing-pages',
+      'Website Maintenance': '/services/website-maintenance-services'
     }
-    
+
     return serviceUrlMap[serviceName] || '/services'
   }
 
@@ -101,39 +100,39 @@ export default function ServicesPage() {
         }
       ]
     },
-          {
-        category: "E-commerce Solutions",
-        description: "Professional product upload and management across Shopify, WooCommerce, Wix, and Magento",
-        icon: ShoppingCart,
-        color: "bg-gradient-to-r from-green-500 to-emerald-600",
-        services: [
-          {
-            title: "Product Upload & Listing",
-            description: "Expert product uploading and listing across Shopify, WooCommerce, Wix, and Magento platforms.",
-            features: ["Bulk Product Upload", "Product Categorization", "Variant Management", "SKU Organization"]
-          },
-          {
-            title: "Product Description Writing",
-            description: "SEO-optimized product descriptions that convert visitors into customers across all platforms.",
-            features: ["SEO-Optimized Copy", "Feature Highlighting", "Benefit-Focused Writing", "Keyword Integration"]
-          },
-          {
-            title: "Product Image Processing",
-            description: "Professional product image editing and optimization for better visibility and sales.",
-            features: ["Image Editing & Enhancement", "Background Removal", "Size Optimization", "Multi-Platform Formatting"]
-          },
-          {
-            title: "Inventory Management",
-            description: "Keep your product inventory organized and updated across multiple platforms and channels.",
-            features: ["Stock Level Updates", "Inventory Tracking", "Low Stock Alerts", "Multi-Platform Sync"]
-          },
-          {
-            title: "Customer Support",
-            description: "Professional customer service for your e-commerce store to enhance satisfaction and loyalty.",
-            features: ["Live Chat Support", "Order Inquiries", "Return Management", "Customer Communications"]
-          }
-        ]
-      },
+    {
+      category: "E-commerce Solutions",
+      description: "Professional product upload and management across Shopify, WooCommerce, Wix, and Magento",
+      icon: ShoppingCart,
+      color: "bg-gradient-to-r from-green-500 to-emerald-600",
+      services: [
+        {
+          title: "Product Upload & Listing",
+          description: "Expert product uploading and listing across Shopify, WooCommerce, Wix, and Magento platforms.",
+          features: ["Bulk Product Upload", "Product Categorization", "Variant Management", "SKU Organization"]
+        },
+        {
+          title: "Product Description Writing",
+          description: "SEO-optimized product descriptions that convert visitors into customers across all platforms.",
+          features: ["SEO-Optimized Copy", "Feature Highlighting", "Benefit-Focused Writing", "Keyword Integration"]
+        },
+        {
+          title: "Product Image Processing",
+          description: "Professional product image editing and optimization for better visibility and sales.",
+          features: ["Image Editing & Enhancement", "Background Removal", "Size Optimization", "Multi-Platform Formatting"]
+        },
+        {
+          title: "Inventory Management",
+          description: "Keep your product inventory organized and updated across multiple platforms and channels.",
+          features: ["Stock Level Updates", "Inventory Tracking", "Low Stock Alerts", "Multi-Platform Sync"]
+        },
+        {
+          title: "Customer Support",
+          description: "Professional customer service for your e-commerce store to enhance satisfaction and loyalty.",
+          features: ["Live Chat Support", "Order Inquiries", "Return Management", "Customer Communications"]
+        }
+      ]
+    },
     {
       category: "Creative & Design Services",
       description: "Professional visual content creation using Canva and basic video editing services",
@@ -263,7 +262,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen">
       <Header />
-      
+
       {/* Enhanced Hero Section */}
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         {/* Background effects */}
@@ -271,7 +270,7 @@ export default function ServicesPage() {
         <div className="absolute top-0 left-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -279,15 +278,15 @@ export default function ServicesPage() {
                 <Users className="w-4 h-4 text-primary-400 mr-2" />
                 <span className="text-primary-400 text-sm font-semibold">PROFESSIONAL SERVICES</span>
               </div>
-              
+
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
                 Professional Virtual Assistant Services
               </h1>
-              
+
               <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-xl">
                 From administrative tasks to e-commerce management and creative design, we provide comprehensive virtual assistant services to help your business thrive and scale efficiently.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                   Get Free Consultation
@@ -298,7 +297,7 @@ export default function ServicesPage() {
                   <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
-              
+
               {/* Trust indicators */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-6 text-gray-400">
                 <div className="flex items-center gap-2">
@@ -315,7 +314,7 @@ export default function ServicesPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Enhanced Right Side Card */}
             <div className="relative">
               <div className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/20 shadow-2xl">
@@ -326,7 +325,7 @@ export default function ServicesPage() {
                   <h3 className="text-2xl font-bold text-white mb-2">Complete Virtual Support</h3>
                   <p className="text-gray-300">Professional solutions for every business need</p>
                 </div>
-                
+
                 <div className="space-y-4 mb-8">
                   {['Administrative Support', 'E-commerce Management', 'Creative Design', 'Digital Marketing', 'Web Development'].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 bg-white/5 rounded-lg p-3">
@@ -335,7 +334,7 @@ export default function ServicesPage() {
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="text-center">
                   <Link href="#services" className="inline-flex items-center text-primary-400 hover:text-primary-300 font-semibold transition-colors duration-300">
                     View All Services
@@ -343,7 +342,7 @@ export default function ServicesPage() {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Floating elements */}
               <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-primary-500 to-orange-500 rounded-full opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-full opacity-40"></div>
@@ -360,13 +359,13 @@ export default function ServicesPage() {
               const IconComponent = stat.icon;
               const colors = [
                 "from-primary-500 to-orange-500",
-                "from-blue-500 to-cyan-500", 
+                "from-blue-500 to-cyan-500",
                 "from-green-500 to-emerald-500",
                 "from-purple-500 to-violet-500"
               ];
               return (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className="bg-white/20 backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/30 text-center group hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
                   style={{
                     background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.15) 100%)',
@@ -392,7 +391,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
-                              Our Service Categories
+              Our Service Categories
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Comprehensive virtual assistant services organized by expertise. From administrative support to e-commerce management and creative design, we've got your business covered.
@@ -403,8 +402,8 @@ export default function ServicesPage() {
             {serviceCategories.map((category, categoryIndex) => {
               const CategoryIcon = category.icon;
               return (
-                <div 
-                  key={categoryIndex} 
+                <div
+                  key={categoryIndex}
                   className="glass-category-card bg-white/20 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl border border-white/30"
                   style={{
                     background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%)',
@@ -425,7 +424,7 @@ export default function ServicesPage() {
                           <p className="text-gray-600 mt-1 text-sm sm:text-base">{category.description}</p>
                         </div>
                       </div>
-                      <Link 
+                      <Link
                         href={getServiceCategoryLink(categoryIndex, category.category)}
                         className="group flex items-center gap-2 text-primary-600 hover:text-primary-700 transition-colors duration-300 bg-primary-50 hover:bg-primary-100 px-4 py-2 rounded-lg border border-primary-200 self-start sm:self-center flex-shrink-0"
                       >
@@ -440,8 +439,8 @@ export default function ServicesPage() {
                   {/* Services Grid */}
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {category.services.map((service, serviceIndex) => (
-                      <Link 
-                        key={serviceIndex} 
+                      <Link
+                        key={serviceIndex}
                         href={getIndividualServiceLink(categoryIndex, service.title)}
                         className="glass-service-card group bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40 cursor-pointer transform hover:-translate-y-2 hover:backdrop-blur-xl"
                         style={{
@@ -455,7 +454,7 @@ export default function ServicesPage() {
                           <h4 className="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors duration-300">{service.title}</h4>
                         </div>
                         <p className="text-gray-600 mb-4 text-sm leading-relaxed">{service.description}</p>
-                        
+
                         <div className="space-y-2">
                           {service.features.map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-center gap-2">
@@ -464,7 +463,7 @@ export default function ServicesPage() {
                             </div>
                           ))}
                         </div>
-                        
+
                         <div className="mt-4 pt-4 border-t border-gray-200 group-hover:border-primary-200 transition-colors duration-300">
                           <div className="flex items-center gap-2 text-primary-600 text-sm font-medium group-hover:text-primary-700 transition-colors duration-300">
                             <span>Learn More</span>
@@ -502,7 +501,7 @@ export default function ServicesPage() {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Custom Service Solutions</h3>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Every business is unique, and sometimes you need a service that's perfectly tailored to your specific needs. 
+                Every business is unique, and sometimes you need a service that's perfectly tailored to your specific needs.
                 We excel at creating custom solutions, whether it's a specialized workflow, unique automation, or a completely new service approach.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mb-8">
@@ -584,7 +583,7 @@ export default function ServicesPage() {
                   borderColor: "border-blue-200"
                 },
                 {
-                  step: "02", 
+                  step: "02",
                   title: "Perfect Match",
                   description: "We carefully select and match you with a virtual assistant who has the right skills and experience.",
                   color: "from-green-500 to-emerald-500",
@@ -628,14 +627,14 @@ export default function ServicesPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Ready to Get Started?</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
               Join 26+ successful businesses that have transformed their operations with TasksACE virtual assistants.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact" className="group bg-gradient-to-r from-primary-500 to-orange-500 hover:from-primary-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 Start Free Consultation
@@ -645,7 +644,7 @@ export default function ServicesPage() {
                 See Success Stories
               </Link>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">

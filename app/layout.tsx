@@ -5,32 +5,22 @@ import WhatsAppFloat from '@/components/WhatsAppFloat'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { config } from '@/lib/config'
 import { Analytics } from '@vercel/analytics/next'
+import CookieConsent from '@/components/CookieConsent'
+import Breadcrumbs from '@/components/Breadcrumbs'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'TasksACE - Professional Virtual Assistant Services | Scale Your Business',
-  description: 'Transform your business with TasksACE virtual assistant services. Expert administrative support, e-commerce management, data entry, and digital marketing solutions. 99.9% success rate, 24/7 support.',
-  keywords: 'virtual assistant services, administrative support, e-commerce assistant, data entry, lead generation, digital marketing, business support, remote assistant, professional VA services',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
+  metadataBase: new URL('https://tasksace.com'),
+  title: {
+    default: 'TasksACE - Professional Virtual Assistant Services',
+    template: '%s | TasksACE'
+  },
+  description: 'Transform your business with TasksACE virtual assistant services. Expert administrative support, e-commerce management, data entry, and digital marketing solutions.',
   icons: {
     icon: '/tasksace-logo.png',
     shortcut: '/tasksace-logo.png',
     apple: '/tasksace-logo.png',
-  },
-  openGraph: {
-    title: 'TasksACE - Professional Virtual Assistant Services | Scale Your Business',
-    description: 'Transform your business with expert virtual assistant services. Administrative support, e-commerce management, and digital marketing solutions with 99.9% success rate.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'TasksACE - Professional Virtual Assistant Services',
-    description: 'Scale your business with expert virtual assistant services. 99.9% success rate, 24/7 support.',
-    creator: '@tasksace',
   },
   verification: {
     google: config.googleSearchConsoleVerification,
@@ -48,7 +38,7 @@ export default function RootLayout({
         <link rel="icon" href="/tasksace-logo.png" />
         <link rel="shortcut icon" href="/tasksace-logo.png" />
         <link rel="apple-touch-icon" href="/tasksace-logo.png" />
-        
+
         {/* Organization Schema for Homepage */}
         <script
           type="application/ld+json"
@@ -68,7 +58,7 @@ export default function RootLayout({
                 "Virtual Assistant Services",
                 "Administrative Support",
                 "E-commerce Solutions",
-                "Creative Design Services", 
+                "Creative Design Services",
                 "Digital Marketing",
                 "Web Development"
               ],
@@ -93,7 +83,7 @@ export default function RootLayout({
                         }
                       },
                       {
-                        "@type": "Offer", 
+                        "@type": "Offer",
                         "itemOffered": {
                           "@type": "Service",
                           "name": "Email Management",
@@ -109,7 +99,7 @@ export default function RootLayout({
                       {
                         "@type": "Offer",
                         "itemOffered": {
-                          "@type": "Service", 
+                          "@type": "Service",
                           "name": "Product Image Processing",
                           "description": "Background removal, image enhancement, color correction"
                         }
@@ -118,7 +108,7 @@ export default function RootLayout({
                         "@type": "Offer",
                         "itemOffered": {
                           "@type": "Service",
-                          "name": "Product Upload & Listing", 
+                          "name": "Product Upload & Listing",
                           "description": "Expert product uploading for Shopify, WooCommerce, Wix, Magento"
                         }
                       }
@@ -138,7 +128,7 @@ export default function RootLayout({
                 "contactType": "customer service",
                 "availableLanguage": "English",
                 "hoursAvailable": {
-                  "@type": "OpeningHoursSpecification", 
+                  "@type": "OpeningHoursSpecification",
                   "dayOfWeek": [
                     "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
                   ],
@@ -157,9 +147,15 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleAnalytics gaId={config.googleAnalyticsId} />
         <Analytics />
-        {children}
+        <Header />
+        <div className="pt-16 lg:pt-20">
+          <Breadcrumbs />
+          {children}
+        </div>
+        <Footer />
+        <CookieConsent />
         <WhatsAppFloat />
       </body>
     </html>
   )
-} 
+}

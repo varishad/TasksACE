@@ -1,34 +1,14 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../components/Header'
 import Hero from '../components/Hero'
 import ChooseUs from '../components/ChooseUs'
 import Testimonials from '../components/Testimonials'
-import Footer from '../components/Footer'
 import { ArrowRight, MessageSquare, Calendar, CheckCircle, ClipboardList, ShoppingCart } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'TasksACE - Professional Virtual Assistant Services | Scale Your Business',
-  description: 'Transform your business with TasksACE virtual assistant services. Expert administrative support, e-commerce management, data entry, and digital marketing solutions. 99.9% success rate, 24/7 support.',
-  keywords: 'virtual assistant services, administrative support, e-commerce assistant, data entry, lead generation, digital marketing, business support, remote assistant, professional VA services',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'TasksACE - Professional Virtual Assistant Services | Scale Your Business',
-    description: 'Transform your business with expert virtual assistant services. Administrative support, e-commerce management, and digital marketing solutions with 99.9% success rate.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-    url: 'https://tasksace.com',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'TasksACE - Professional Virtual Assistant Services',
-    description: 'Scale your business with expert virtual assistant services. 99.9% success rate, 24/7 support.',
-    creator: '@tasksace',
-  },
+import { generateDynamicMetadata } from '@/lib/seo'
+
+export async function generateMetadata() {
+  return await generateDynamicMetadata('/')
 }
 
 export default function Home() {
@@ -42,7 +22,7 @@ export default function Home() {
     },
     {
       icon: ShoppingCart,
-      title: "E-commerce Assistant", 
+      title: "E-commerce Assistant",
       description: "Optimize your online store operations and boost sales performance.",
       features: ["Product Listing", "Order Processing", "Customer Service", "Inventory Management"],
       link: "/services/ecommerce-assistant"
@@ -57,9 +37,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      <Header />
       <Hero />
-      
+
       {/* Services Preview - Streamlined */}
       <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -125,15 +104,15 @@ export default function Home() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">Ready to Get Started?</span>
             </div>
-            
+
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join 26+ businesses already growing with TasksACE virtual assistant services. 
+              Join 26+ businesses already growing with TasksACE virtual assistant services.
               Let's discuss how we can help your business thrive.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="/contact" className="group bg-primary-500 hover:bg-primary-600 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <MessageSquare className="w-5 h-5 mr-2" />
@@ -145,7 +124,7 @@ export default function Home() {
                 Schedule a Call
               </a>
             </div>
-            
+
             <div className="mt-12 pt-8 border-t border-gray-200">
               <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                 <div className="flex items-center space-x-2">
@@ -166,7 +145,6 @@ export default function Home() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 } 

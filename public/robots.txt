@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tasksace.com/sitemap.xml

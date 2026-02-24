@@ -1,30 +1,11 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import { Clock, BookOpen, Users, ArrowRight } from 'lucide-react'
 
-export const metadata: Metadata = {
-  title: 'Blog - TasksACE | Insights, Tips & Industry Updates',
-  description: 'Stay updated with the latest insights, tips, and industry updates from TasksACE. Expert advice on virtual assistance, business growth, and digital transformation.',
-  keywords: 'blog, virtual assistant tips, business insights, digital transformation, productivity tips, industry updates',
-  authors: [{ name: 'TasksACE' }],
-  creator: 'TasksACE',
-  publisher: 'TasksACE',
-  robots: 'index, follow',
-  openGraph: {
-    title: 'Blog - TasksACE | Insights, Tips & Industry Updates',
-    description: 'Stay updated with the latest insights, tips, and industry updates from TasksACE.',
-    type: 'website',
-    locale: 'en_US',
-    siteName: 'TasksACE',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Blog - TasksACE | Insights, Tips & Industry Updates',
-    description: 'Stay updated with the latest insights, tips, and industry updates from TasksACE.',
-    creator: '@tasksace',
-  },
+import { generateDynamicMetadata } from '@/lib/seo'
+
+export async function generateMetadata() {
+  return await generateDynamicMetadata('/blog')
 }
 
 export default function BlogPage() {
@@ -48,8 +29,7 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen">
-      <Header />
-      
+
       {/* Hero Section */}
       <section className="py-20 lg:py-32 bg-gradient-to-br from-primary-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -58,17 +38,17 @@ export default function BlogPage() {
               <Clock className="w-4 h-4 mr-2" />
               Coming Soon
             </div>
-            
+
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Our Blog is
               <span className="text-primary-500 block">Coming Soon</span>
             </h1>
-            
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8 leading-relaxed">
-              We're working hard to bring you valuable insights, tips, and industry updates. 
+              We're working hard to bring you valuable insights, tips, and industry updates.
               Our blog will feature expert advice on virtual assistance, business growth, and digital transformation.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="bg-white rounded-2xl px-6 py-4 shadow-lg border border-gray-100">
                 <div className="text-2xl font-bold text-primary-500">Stay Tuned</div>
@@ -91,7 +71,7 @@ export default function BlogPage() {
               What to Expect
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our blog will feature comprehensive articles, case studies, and expert insights 
+              Our blog will feature comprehensive articles, case studies, and expert insights
               to help you make the most of virtual assistant services.
             </p>
           </div>
@@ -118,8 +98,8 @@ export default function BlogPage() {
               Be the first to know when our blog launches and get exclusive insights delivered to your inbox.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input 
-                type="email" 
+              <input
+                type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
               />
@@ -131,7 +111,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 } 

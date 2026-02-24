@@ -1,12 +1,11 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import { Target, ArrowRight, MessageSquare, Calendar, CheckCircle, Eye, Users, Clock, Heart, Globe, Award, Building, Star } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'About TasksACE - Your Trusted Virtual Assistant Partner',
-  description: 'Learn about TasksACE, a leading virtual assistant company founded in 2020. Meet our team, mission, and values. 386+ projects completed, 26+ happy clients, 99.9% success rate.',
+import { generateDynamicMetadata } from '@/lib/seo'
+
+export async function generateMetadata() {
+  return await generateDynamicMetadata('/about')
 }
 
 export default function AboutPage() {
@@ -58,7 +57,7 @@ export default function AboutPage() {
     }
   ]
 
-    const milestones = [
+  const milestones = [
     {
       year: "2020",
       title: "TasksACE Founded",
@@ -66,7 +65,7 @@ export default function AboutPage() {
       icon: Building
     },
     {
-      year: "2021", 
+      year: "2021",
       title: "First 100 Projects",
       description: "Achieved our first major milestone with 100+ successful projects delivered on time with exceptional quality and 98% client satisfaction rate.",
       icon: Target
@@ -107,7 +106,7 @@ export default function AboutPage() {
       description: "5-star rated",
       icon: Users,
       color: "from-green-500 to-green-600",
-      bgColor: "from-green-100 to-green-200", 
+      bgColor: "from-green-100 to-green-200",
       textColor: "text-green-600"
     },
     {
@@ -136,9 +135,8 @@ export default function AboutPage() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/5"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-500/10 to-orange-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/5 to-primary-500/10 rounded-full blur-3xl"></div>
-      
-      <Header />
-      
+
+
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
         <div className="max-w-7xl mx-auto container-padding text-center">
@@ -147,7 +145,7 @@ export default function AboutPage() {
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
               <span className="text-sm font-semibold text-primary-700">About TasksACE</span>
             </div>
-            
+
             <h1 className="text-hero text-gray-900 mb-8 leading-tight">
               Your Trusted Partner for <span className="premium-text-gradient">Virtual Excellence</span>
             </h1>
@@ -194,7 +192,7 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            
+
             <div className="space-y-8 fade-in-up">
               {/* Mission Container */}
               <div className="card-modern relative overflow-hidden">
@@ -211,7 +209,7 @@ export default function AboutPage() {
                   </p>
                 </div>
               </div>
-              
+
               {/* Vision Container */}
               <div className="card-modern relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-purple-600/10 rounded-full blur-2xl"></div>
@@ -255,7 +253,7 @@ export default function AboutPage() {
                 { bg: "from-indigo-500 to-indigo-600", hoverBg: "from-indigo-500/5 to-indigo-600/5" }
               ]
               const color = colors[index % colors.length]
-              
+
               return (
                 <div key={index} className="card-hover group relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-r ${color.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -289,12 +287,12 @@ export default function AboutPage() {
               {/* Flowing Lightning Effect */}
               <div className="absolute top-0 left-0 w-full h-12 bg-gradient-to-b from-blue-400/80 to-transparent rounded-full animate-pulse"></div>
               <div className="absolute top-0 left-0 w-full h-full">
-                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full animate-ping" style={{animationDelay: '0s', animationDuration: '4s'}}></div>
-                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full animate-ping" style={{animationDelay: '1.5s', animationDuration: '4s'}}></div>
-                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full animate-ping" style={{animationDelay: '3s', animationDuration: '4s'}}></div>
+                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full animate-ping" style={{ animationDelay: '0s', animationDuration: '4s' }}></div>
+                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/40 to-transparent rounded-full animate-ping" style={{ animationDelay: '1.5s', animationDuration: '4s' }}></div>
+                <div className="w-full h-1 bg-gradient-to-r from-transparent via-white/60 to-transparent rounded-full animate-ping" style={{ animationDelay: '3s', animationDuration: '4s' }}></div>
               </div>
             </div>
-            
+
             <div className="space-y-8 stagger-animation">
               {milestones.map((milestone, index) => {
                 const IconComponent = milestone.icon
@@ -308,7 +306,7 @@ export default function AboutPage() {
                 const color = colors[index % colors.length]
                 const nextColor = colors[(index + 1) % colors.length]
                 const isLast = index === milestones.length - 1
-                
+
                 return (
                   <div key={index} className="flex items-center group relative">
                     {/* Soft Connection Bridge */}
@@ -316,23 +314,23 @@ export default function AboutPage() {
                       <div className="absolute left-11.5 top-20 w-1 h-16 z-5">
                         <div className={`w-0.5 h-full bg-gradient-to-b from-${color.connectColor} to-${nextColor.connectColor} mx-auto rounded-full`}></div>
                         {/* Flowing spark */}
-                        <div className="absolute top-0 left-0 w-1 h-3 bg-gradient-to-b from-white/80 to-transparent rounded-full animate-bounce" 
-                             style={{animationDelay: `${index * 0.8}s`, animationDuration: '3s'}}></div>
+                        <div className="absolute top-0 left-0 w-1 h-3 bg-gradient-to-b from-white/80 to-transparent rounded-full animate-bounce"
+                          style={{ animationDelay: `${index * 0.8}s`, animationDuration: '3s' }}></div>
                         {/* Glow effect */}
                         <div className={`absolute top-1/2 left-0 w-1 h-1 bg-${color.connectColor} rounded-full animate-ping opacity-60`}
-                             style={{animationDelay: `${index * 1.2}s`, animationDuration: '2.5s'}}></div>
+                          style={{ animationDelay: `${index * 1.2}s`, animationDuration: '2.5s' }}></div>
                       </div>
                     )}
-                    
+
                     <div className="flex-shrink-0 w-24 text-center relative z-10">
                       <div className={`w-16 h-16 bg-gradient-to-br ${color.bg} rounded-2xl flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300 relative overflow-hidden`}>
                         <span className="text-white font-bold text-lg relative z-10">{milestone.year}</span>
                         {/* Soft Pulsing Ring Effect */}
-                        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${color.bg} animate-ping opacity-15`} 
-                             style={{animationDuration: '5s', animationDelay: `${index * 1.2}s`}}></div>
+                        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${color.bg} animate-ping opacity-15`}
+                          style={{ animationDuration: '5s', animationDelay: `${index * 1.2}s` }}></div>
                         {/* Inner glow */}
-                        <div className="absolute inset-2 rounded-xl bg-white/10 animate-pulse" 
-                             style={{animationDuration: '3s', animationDelay: `${index * 0.6}s`}}></div>
+                        <div className="absolute inset-2 rounded-xl bg-white/10 animate-pulse"
+                          style={{ animationDuration: '3s', animationDelay: `${index * 0.6}s` }}></div>
                       </div>
                     </div>
                     <div className="ml-8 card-modern flex-1 group-hover:shadow-strong transition-all duration-300">
@@ -370,7 +368,7 @@ export default function AboutPage() {
                 { bg: "from-green-500 to-green-600", hoverBg: "from-green-500/5 to-green-600/5" }
               ]
               const color = colors[index % colors.length]
-              
+
               return (
                 <div key={index} className="card-hover group relative overflow-hidden">
                   <div className={`absolute inset-0 bg-gradient-to-r ${color.hoverBg} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
@@ -409,21 +407,21 @@ export default function AboutPage() {
           <div className="card-modern relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-orange-500/5"></div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/10 to-orange-500/10 rounded-full blur-2xl"></div>
-            
+
             <div className="relative max-w-3xl mx-auto">
               <div className="inline-flex items-center space-x-2 bg-primary-50 rounded-full px-4 py-2 mb-6 border border-primary-200">
                 <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
                 <span className="text-sm font-semibold text-primary-700">Ready to Get Started?</span>
               </div>
-              
+
               <h2 className="text-heading-1 text-gray-900 mb-6 leading-tight">
                 Ready to Transform Your <span className="premium-text-gradient">Business Operations?</span>
               </h2>
               <p className="text-body-large mb-10 leading-relaxed">
-                Join 26+ businesses already growing with TasksACE virtual assistant services. 
+                Join 26+ businesses already growing with TasksACE virtual assistant services.
                 Let's discuss how we can help your business thrive and achieve operational excellence.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
                 <a href="/contact" className="btn-primary group">
                   <MessageSquare className="w-5 h-5 mr-2" />
@@ -435,7 +433,7 @@ export default function AboutPage() {
                   Schedule a Call
                 </a>
               </div>
-              
+
               <div className="pt-8 border-t border-gray-200">
                 <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
                   <div className="flex items-center space-x-2">
@@ -457,7 +455,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 } 

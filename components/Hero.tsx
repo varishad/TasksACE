@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 via-white to-primary-50/30 overflow-hidden min-h-[85vh]" style={{ paddingTop: '64px' }}>
+    <section className="relative bg-gradient-to-br from-gray-50 via-white to-primary-50/30 overflow-hidden min-h-[85vh]">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Gradient Orbs */}
@@ -38,7 +38,7 @@ export default function Hero() {
 
             {/* Subheadline - Mobile Optimized */}
             <p className="text-base sm:text-lg lg:text-xl leading-relaxed text-gray-600 max-w-3xl mx-auto mb-8 fade-in-up px-4" style={{ animationDelay: '0.2s' }}>
-              Get dedicated virtual assistant services tailored to your business needs. 
+              Get dedicated virtual assistant services tailored to your business needs.
               Focus on what matters most while we handle the rest.
             </p>
 
@@ -60,8 +60,8 @@ export default function Hero() {
 
             {/* Single CTA Button - Mobile Optimized */}
             <div className="mb-12 fade-in-up px-4" style={{ animationDelay: '0.4s' }}>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-base sm:text-lg group"
               >
                 <span>Start Free Consultation</span>

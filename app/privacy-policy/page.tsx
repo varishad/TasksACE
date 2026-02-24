@@ -1,7 +1,5 @@
 import React from 'react'
 import type { Metadata } from 'next'
-import Header from '../../components/Header'
-import Footer from '../../components/Footer'
 import { Shield, Eye, Lock, Users, FileText, Globe } from 'lucide-react'
 
 export const metadata: Metadata = {
@@ -55,8 +53,7 @@ export default function PrivacyPolicy() {
 
   return (
     <main className="min-h-screen">
-      <Header />
-      
+
       {/* Hero Section */}
       <section className="bg-black pt-32 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -88,7 +85,7 @@ export default function PrivacyPolicy() {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment to Privacy</h2>
                   <p className="text-gray-700 leading-relaxed text-lg">
-                    At TasksACE, we understand that your privacy is important. This Privacy Policy explains how we collect, 
+                    At TasksACE, we understand that your privacy is important. This Privacy Policy explains how we collect,
                     use, disclose, and safeguard your information when you visit our website or use our virtual assistant services.
                   </p>
                 </div>
@@ -126,7 +123,7 @@ export default function PrivacyPolicy() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Your Rights and Choices</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                You have the right to access, update, or delete your personal information. You may also opt out of certain 
+                You have the right to access, update, or delete your personal information. You may also opt out of certain
                 communications from us. To exercise these rights, please contact us using the information provided below.
               </p>
             </div>
@@ -134,7 +131,7 @@ export default function PrivacyPolicy() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4">International Data Transfers</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                As a global service provider, we may transfer your information to countries outside your jurisdiction. 
+                As a global service provider, we may transfer your information to countries outside your jurisdiction.
                 We ensure appropriate safeguards are in place to protect your information during such transfers.
               </p>
             </div>
@@ -142,7 +139,7 @@ export default function PrivacyPolicy() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Changes to This Policy</h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We may update this Privacy Policy from time to time. Any changes will be posted on this page with an 
+                We may update this Privacy Policy from time to time. Any changes will be posted on this page with an
                 updated revision date. We encourage you to review this policy periodically.
               </p>
             </div>
@@ -170,7 +167,6 @@ export default function PrivacyPolicy() {
         </div>
       </section>
 
-      <Footer />
     </main>
   )
 } 

@@ -5,8 +5,6 @@ import React from 'react'
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { Mail, Phone, Send, MessageCircle, ArrowRight, MapPin, ChevronDown, Search, Check, Star, Clock, Users, Globe, Heart, Shield } from 'lucide-react';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
 
 
 
@@ -317,7 +315,6 @@ export default function Contact() {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary-500/10 to-orange-500/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-blue-500/5 to-primary-500/10 rounded-full blur-3xl"></div>
 
-      <Header />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16">
@@ -472,7 +469,7 @@ export default function Contact() {
                             value={formData.fullName}
                             onChange={handleChange}
                             className={`form-input ${errors.fullName ? 'border-red-500 focus:border-red-500 focus:ring-red-500' :
-                                validFields.fullName ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
+                              validFields.fullName ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
                               }`}
                             placeholder="Enter your full name"
                           />
@@ -501,7 +498,7 @@ export default function Contact() {
                             value={formData.email}
                             onChange={handleChange}
                             className={`form-input ${errors.email ? 'border-red-500 focus:border-red-500 focus:ring-red-500' :
-                                validFields.email ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
+                              validFields.email ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
                               }`}
                             placeholder="Enter your email address"
                           />
@@ -610,7 +607,7 @@ export default function Contact() {
                           onChange={handleChange}
                           rows={6}
                           className={`form-input resize-none ${errors.message ? 'border-red-500 focus:border-red-500 focus:ring-red-500' :
-                              validFields.message ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
+                            validFields.message ? 'border-green-500 focus:border-green-500 focus:ring-green-500' : ''
                             }`}
                           placeholder="Tell us about your project requirements, timeline, budget range, and any specific needs. The more details you provide, the better we can tailor our proposal to your needs."
                         />
@@ -692,7 +689,6 @@ export default function Contact() {
         </div>
       </section>
 
-      <Footer />
     </main>
   );
 } 

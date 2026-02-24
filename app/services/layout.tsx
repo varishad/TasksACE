@@ -1,14 +1,10 @@
 import React from 'react'
 import type { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Professional Virtual Assistant Services | TasksACE Complete Solutions',
-  description: 'Comprehensive virtual assistant services including administrative support, e-commerce solutions, creative design, digital marketing, and web development. Expert VA services for business growth.',
-  keywords: 'virtual assistant services, administrative support, e-commerce solutions, creative design services, digital marketing, web development, VA services, business support',
-  openGraph: {
-    title: 'Virtual Assistant Services | TasksACE - Professional Business Support',
-    description: 'Comprehensive virtual assistant services including administrative support, e-commerce solutions, creative design, digital marketing, and web development.',
-  },
+import { generateDynamicMetadata } from '@/lib/seo'
+
+export async function generateMetadata() {
+  return await generateDynamicMetadata('/services')
 }
 
 export default function ServicesLayout({
