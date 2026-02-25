@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Services Preview - Streamlined */}
       <section className="py-20 lg:py-24 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <span className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4 block">OUR SERVICES</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">

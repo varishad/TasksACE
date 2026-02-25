@@ -56,7 +56,7 @@ export default function PrivacyPolicy() {
 
       {/* Hero Section */}
       <section className="bg-black pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-primary-500 text-sm font-bold tracking-wider uppercase mb-4">
             LEGAL INFORMATION
           </div>

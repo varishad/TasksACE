@@ -275,7 +275,7 @@ export default function ServicesPage() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center bg-primary-500/10 rounded-full px-4 py-2 mb-6 border border-primary-500/20">
@@ -357,7 +357,7 @@ export default function ServicesPage() {
 
       {/* Enhanced Stats Section */}
       <section className="relative -mt-16 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
@@ -392,7 +392,7 @@ export default function ServicesPage() {
 
       {/* Service Categories */}
       <section id="services" className="section-padding bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Our Service Categories
@@ -488,7 +488,7 @@ export default function ServicesPage() {
 
       {/* Custom Services Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-12">
             <h2 className="text-heading-1 mb-6 text-gray-900">
               Need Something Custom?
@@ -533,7 +533,7 @@ export default function ServicesPage() {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose TasksACE</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">

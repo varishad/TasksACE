@@ -139,7 +139,7 @@ export default function AboutPage() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20">
-        <div className="max-w-7xl mx-auto container-padding text-center">
+        <div className="max-w-[1344px] mx-auto container-padding text-center">
           <div className="max-w-4xl mx-auto fade-in-up">
             <div className="inline-flex items-center space-x-2 bg-primary-50 rounded-full px-4 py-2 mb-6 border border-primary-200">
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
@@ -175,7 +175,7 @@ export default function AboutPage() {
 
       {/* Company Story */}
       <section className="relative section-padding">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="fade-in-up">
               <span className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4 block">OUR STORY</span>
@@ -232,7 +232,7 @@ export default function AboutPage() {
 
       {/* Our Values */}
       <section className="relative section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16 fade-in-up">
             <span className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4 block">OUR VALUES</span>
             <h2 className="text-heading-1 text-gray-900 mb-6">What Drives Us Forward</h2>
@@ -354,7 +354,7 @@ export default function AboutPage() {
 
       {/* Team Section */}
       <section className="relative section-padding bg-gray-50">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16 fade-in-up">
             <span className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4 block">OUR LEADERSHIP</span>
             <h2 className="text-heading-1 text-gray-900 mb-6">Meet Our Leadership Team</h2>

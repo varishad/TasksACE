@@ -35,9 +35,9 @@ const mainFeatures = [
 export default function ChooseUs() {
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Left Side - Content */}
           <div>
             <div className="mb-8">
@@ -77,8 +77,8 @@ export default function ChooseUs() {
               {mainFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
                 return (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className="bg-white/10 backdrop-blur-lg p-8 rounded-2xl border border-white/20 hover:shadow-2xl transition-all duration-300 hover:border-white/40 transform hover:-translate-y-1"
                     style={{
                       background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%)',
@@ -100,7 +100,7 @@ export default function ChooseUs() {
                 );
               })}
             </div>
-            
+
             {/* Decorative element */}
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-primary-500/10 rounded-full blur-2xl"></div>
             <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-primary-500/5 rounded-full blur-3xl"></div>

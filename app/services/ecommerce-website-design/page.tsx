@@ -264,7 +264,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
       <section className="relative bg-black pt-12 pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900/20 via-transparent to-primary-900/10"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center bg-primary-500/10 rounded-full px-4 py-2 mb-6 border border-primary-500/20">
@@ -332,7 +332,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Stats Section */}
       <section className="relative -mt-16 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
@@ -352,7 +352,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Services Details Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               What's Included
@@ -412,7 +412,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Benefits Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Key Benefits
@@ -446,7 +446,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Simple Pricing
@@ -505,7 +505,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Process Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto container-padding relative">
+        <div className="max-w-[1344px] mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-primary-600 mr-2" />
@@ -567,7 +567,7 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* Testimonials Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Client Success Stories  

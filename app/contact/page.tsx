@@ -318,7 +318,7 @@ export default function Contact() {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16">
-        <div className="max-w-7xl mx-auto container-padding text-center">
+        <div className="max-w-[1344px] mx-auto container-padding text-center">
           <div className="max-w-4xl mx-auto fade-in-up">
             <div className="inline-flex items-center space-x-2 bg-primary-50 rounded-full px-4 py-2 mb-6 border border-primary-200">
               <div className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></div>
@@ -337,7 +337,7 @@ export default function Contact() {
 
       {/* Main Contact Section */}
       <section className="relative section-padding">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="grid grid-cols-1 xl:grid-cols-5 gap-12 items-start">
 
             {/* Contact Information - Enhanced */}
@@ -661,7 +661,7 @@ export default function Contact() {
 
       {/* Trust Elements Below Form */}
       <section className="relative pb-16">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
             {[
               { icon: Clock, title: "24-48 Hours", subtitle: "Lightning Response", color: "text-primary-600" },

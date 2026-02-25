@@ -123,7 +123,7 @@ export default function CaseStudiesPage() {
       
       {/* Hero Section */}
       <section className="bg-black pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="text-primary-500 text-sm font-bold tracking-wider uppercase mb-4">
             SUCCESS STORIES
           </div>
@@ -138,7 +138,7 @@ export default function CaseStudiesPage() {
 
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon
@@ -161,7 +161,7 @@ export default function CaseStudiesPage() {
 
       {/* Case Studies */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Case Studies</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -235,7 +235,7 @@ export default function CaseStudiesPage() {
 
       {/* Client Testimonials */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
             <p className="text-xl text-gray-600">Real feedback from satisfied clients across different industries</p>

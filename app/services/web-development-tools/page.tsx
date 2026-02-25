@@ -265,7 +265,7 @@ export default function SmallToolDevelopmentPage() {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary-500/3 to-orange-500/3 rounded-full blur-3xl"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div className="inline-flex items-center bg-primary-500/10 rounded-full px-4 py-2 mb-6 border border-primary-500/20">
@@ -354,7 +354,7 @@ export default function SmallToolDevelopmentPage() {
 
       {/* Enhanced Stats Section */}
       <section className="relative -mt-16 z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
@@ -374,7 +374,7 @@ export default function SmallToolDevelopmentPage() {
 
       {/* Services Details Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               What's Included
@@ -434,7 +434,7 @@ export default function SmallToolDevelopmentPage() {
 
       {/* Benefits Section */}
       <section className="section-padding bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Key Benefits
@@ -468,7 +468,7 @@ export default function SmallToolDevelopmentPage() {
 
       {/* Pricing Section */}
       <section id="pricing" className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Simple Pricing
@@ -530,7 +530,7 @@ export default function SmallToolDevelopmentPage() {
         <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100/30 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-orange-100/20 rounded-full blur-3xl"></div>
         
-        <div className="max-w-7xl mx-auto container-padding relative">
+        <div className="max-w-[1344px] mx-auto container-padding relative">
           <div className="text-center mb-20">
             <div className="inline-flex items-center bg-primary-100 rounded-full px-4 py-2 mb-6">
               <Zap className="w-4 h-4 text-primary-600 mr-2" />
@@ -613,7 +613,7 @@ export default function SmallToolDevelopmentPage() {
 
       {/* Testimonials Section */}
       <section className="section-padding bg-white">
-        <div className="max-w-7xl mx-auto container-padding">
+        <div className="max-w-[1344px] mx-auto container-padding">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               Client Success Stories

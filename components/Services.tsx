@@ -38,8 +38,8 @@ const Services = () => {
 
   return (
     <section id="services" className="py-20 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+      <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Services Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -59,9 +59,9 @@ const Services = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900">{assistant.title}</h3>
                 </div>
-                
+
                 <p className="text-gray-600 mb-6 text-lg leading-relaxed">{assistant.description}</p>
-                
+
                 <ul className="space-y-4">
                   {assistant.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-700">

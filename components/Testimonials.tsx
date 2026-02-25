@@ -83,7 +83,7 @@ const Testimonials = () => {
   // Auto-slide functionality
   useEffect(() => {
     setIsMounted(true)
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length)
     }, 4000) // Change slide every 4 seconds
@@ -105,7 +105,7 @@ const Testimonials = () => {
 
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <span className="text-primary-500 font-semibold text-sm tracking-wide uppercase mb-4 block">TESTIMONIALS</span>
           <h2 className="text-5xl font-bold text-gray-900 mb-6">What our clients say</h2>
@@ -117,7 +117,7 @@ const Testimonials = () => {
         {/* Testimonials Slider */}
         <div className="relative">
           <div className="overflow-hidden rounded-3xl">
-            <div 
+            <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: isMounted ? `translateX(-${currentIndex * 100}%)` : 'translateX(0%)' }}
             >
@@ -167,11 +167,10 @@ const Testimonials = () => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex 
-                  ? 'bg-primary-500 w-8' 
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                  ? 'bg-primary-500 w-8'
                   : 'bg-gray-300 hover:bg-gray-400'
-              }`}
+                }`}
             />
           ))}
         </div>
