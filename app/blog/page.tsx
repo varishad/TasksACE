@@ -24,7 +24,7 @@ export default function BlogPage() {
         <div className="max-w-[1344px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-normal text-gray-900 mb-6 leading-tight tracking-tight">
-              Insights & <span className="text-primary-500">Strategies</span> for Growth
+              Insights & <span className="text-[#ff5e00]">Strategies</span> for Growth
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
               Explore our latest articles on virtual assistance, operational efficiency,
@@ -49,7 +49,7 @@ export default function BlogPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                   <div className="absolute top-6 left-6">
-                    <span className="bg-primary-500 text-white px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider shadow-lg">
+                    <span className="bg-[#ff5e00] text-white px-4 py-2 rounded-full text-xs font-medium uppercase tracking-wider shadow-lg">
                       Featured
                     </span>
                   </div>
@@ -57,7 +57,7 @@ export default function BlogPage() {
 
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-500 font-medium">
-                    <span className="text-primary-600 uppercase tracking-widest font-medium">{featuredPost.category}</span>
+                    <span className="text-[#ff5e00] uppercase tracking-widest font-medium">{featuredPost.category}</span>
                     <span className="w-1 h-1 rounded-full bg-gray-300"></span>
                     <div className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
@@ -65,7 +65,7 @@ export default function BlogPage() {
                     </div>
                   </div>
 
-                  <h2 className="text-3xl lg:text-4xl font-normal text-gray-900 mb-6 group-hover:text-primary-600 transition-colors leading-tight">
+                  <h2 className="text-3xl lg:text-4xl font-normal text-gray-900 mb-6 group-hover:text-[#ff5e00] transition-colors leading-tight">
                     <Link href={`/blog/${featuredPost.slug}`}>
                       {featuredPost.title}
                     </Link>
@@ -77,12 +77,12 @@ export default function BlogPage() {
 
                   <div className="flex items-center justify-between mt-auto">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center text-primary-600">
-                        <User className="w-5 h-5" />
+                      <div className="w-10 h-10 rounded-full bg-[#ff5e00] flex items-center justify-center p-2">
+                        <Image src="/TasksACE.svg" alt="TasksACE" width={24} height={24} className="w-full h-full object-contain" />
                       </div>
                       <span className="font-medium text-gray-900 text-sm">{featuredPost.author}</span>
                     </div>
-                    <Link href={`/blog/${featuredPost.slug}`} className="flex items-center gap-2 text-primary-600 font-medium hover:gap-3 transition-all group/btn">
+                    <Link href={`/blog/${featuredPost.slug}`} className="flex items-center gap-2 text-[#ff5e00] font-medium hover:gap-3 transition-all group/btn">
                       Read Article <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
@@ -103,7 +103,7 @@ export default function BlogPage() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest text-primary-600">
+                    <span className="bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-widest text-[#ff5e00]">
                       {post.category}
                     </span>
                   </div>
@@ -114,10 +114,10 @@ export default function BlogPage() {
                     <span>•</span>
                     <span>{post.readTime}</span>
                   </div>
-                  <h3 className="text-xl font-normal text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem] group-hover:text-primary-500 transition-colors">
+                  <h3 className="text-xl font-normal text-gray-900 mb-4 line-clamp-2 min-h-[3.5rem] group-hover:text-[#ff5e00] transition-colors">
                     {post.title}
                   </h3>
-                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-primary-500 group/link">
+                  <Link href={`/blog/${post.slug}`} className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 hover:text-[#ff5e00] group/link">
                     Read More <ChevronRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </Link>
                 </div>
@@ -143,9 +143,9 @@ export default function BlogPage() {
                 <input
                   type="email"
                   placeholder="name@email.com"
-                  className="flex-1 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:bg-white/10 transition-all font-medium"
+                  className="flex-1 px-8 py-5 rounded-2xl bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#ff5e00] focus:bg-white/10 transition-all font-medium"
                 />
-                <button className="bg-primary-500 text-white px-8 py-5 rounded-2xl font-medium hover:bg-primary-600 transition-all shadow-xl hover:shadow-primary-500/25 flex items-center justify-center">
+                <button className="bg-[#ff5e00] text-white px-8 py-5 rounded-2xl font-medium hover:bg-[#e65500] transition-all shadow-xl hover:shadow-[#ff5e00]/25 flex items-center justify-center">
                   Subscribe <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </form>

@@ -103,33 +103,33 @@ export default function VirtualAssistantForSmallBusiness() {
                   Discover how hiring a virtual assistant can transform your small business. Learn the benefits, costs, and how to find the perfect VA for your needs.
                 </p>
 
-                <div className="flex flex-row justify-between items-center py-6 border-t border-b border-gray-200 lg:border-none lg:py-0 w-full relative z-10">
+                <div className="flex flex-col gap-6 pt-6 border-t border-gray-100 lg:border-none lg:pt-0 w-full relative z-10">
                   <div className="flex items-center gap-4">
-                    <div className="relative w-[56px] h-[56px] lg:w-[64px] lg:h-[64px] rounded-full overflow-hidden shrink-0 bg-[#ff5e00] flex items-center justify-center shadow-sm">
-                      <Image src="/TasksACE.svg" alt="TasksACE Team" fill className="object-contain p-[12px]" />
+                    <div className="relative w-[56px] h-[56px] lg:w-[64px] lg:h-[64px] rounded-full overflow-hidden shrink-0 bg-[#ff5e00] flex items-center justify-center p-[12px]">
+                      <Image src="/TasksACE.svg" alt="TasksACE Team" width={40} height={40} className="object-contain" />
                     </div>
-                    <div className="flex flex-col gap-0.5">
+                    <div className="flex flex-col gap-0.5 text-left">
                       <span className="text-[17px] lg:text-[18px] font-medium text-[#001e00]">TasksACE Team</span>
                       <span className="text-[14px] lg:text-[15px] font-normal text-[#5e6d55]">Published | Feb 24, 2026</span>
                     </div>
                   </div>
 
-                  <div className="inline-flex items-center gap-3 bg-[#f2f5f2] px-4 py-2 lg:py-2.5 rounded-[8px] shrink-0">
+                  <div className="inline-flex items-center gap-3 bg-[#f2f5f2] px-4 py-2 lg:py-2.5 rounded-[8px] w-fit">
                     <span className="text-[14px] lg:text-[15px] font-medium text-[#5e6d55]">Share:</span>
                     <div className="flex items-center gap-3">
-                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors" aria-label="Share on X">
+                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors border border-gray-200 p-1.5 rounded-md" aria-label="Share on X">
                         <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                         </svg>
                       </button>
-                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors" aria-label="Share on LinkedIn">
+                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors border border-gray-200 p-1.5 rounded-md" aria-label="Share on LinkedIn">
                         <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor">
                           <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                         </svg>
                       </button>
-                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors" aria-label="Share on Facebook">
+                      <button className="text-[#5e6d55] hover:text-[#ff5e00] transition-colors border border-gray-200 p-1.5 rounded-md" aria-label="Share on Facebook">
                         <svg className="w-[15px] h-[15px]" viewBox="0 0 24 24" fill="currentColor">
-                          <path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                         </svg>
                       </button>
                     </div>
@@ -161,7 +161,7 @@ export default function VirtualAssistantForSmallBusiness() {
                     <a
                       key={item.id}
                       href={`#${item.id}`}
-                      className={`block text-[14px] transition-all py-1.5 ${activeId === item.id ? 'text-primary-600 font-medium' : 'text-gray-500 hover:text-gray-900 font-medium'}`}
+                      className={`block text-[14px] transition-all py-1.5 ${activeId === item.id ? 'text-[#ff5e00] font-medium' : 'text-gray-500 hover:text-gray-900 font-medium'}`}
                     >
                       {item.label}
                     </a>
@@ -189,7 +189,7 @@ export default function VirtualAssistantForSmallBusiness() {
                         key={item.id}
                         href={`#${item.id}`}
                         onClick={() => setIsTocOpen(false)}
-                        className={`block text-[14px] transition-colors py-1 ${activeId === item.id ? 'text-primary-600 font-medium' : 'text-gray-600 font-medium'}`}
+                        className={`block text-[14px] transition-colors py-1 ${activeId === item.id ? 'text-[#ff5e00] font-medium' : 'text-gray-600 font-medium'}`}
                       >
                         {item.label}
                       </a>
@@ -199,12 +199,12 @@ export default function VirtualAssistantForSmallBusiness() {
               </div>
 
               <div className="prose prose-lg prose-gray max-w-none 
-                prose-headings:text-gray-900 prose-headings:font-normal prose-headings:scroll-mt-28
-                prose-p:text-[#222222] prose-p:leading-[32px] prose-p:text-[19px] [&_section>p]:mb-7
-                prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline
+                prose-headings:text-gray-900 prose-headings:font-normal prose-headings:scroll-mt-28 prose-headings:mb-4
+                prose-p:text-[#222222] prose-p:leading-[32px] prose-p:text-[19px] prose-p:mb-5
+                prose-a:text-[#ff5e00] prose-a:no-underline hover:prose-a:underline
                 prose-img:rounded-[20px] prose-img:shadow-lg
                 prose-strong:text-gray-900
-                prose-ul:list-disc prose-li:text-[#222222] prose-li:text-[19px] prose-li:leading-[32px] [&_section>ul]:mb-7 font-inter">
+                prose-ul:list-disc prose-li:text-[#222222] prose-li:text-[19px] prose-li:leading-[32px] prose-li:mb-2 prose-ul:mb-5 font-inter">
 
                 <section id="what-is-va" className="mb-10">
                   <h2 className="text-[38px] font-normal text-gray-900 mb-4">What is a Virtual Assistant?</h2>
@@ -225,7 +225,7 @@ export default function VirtualAssistantForSmallBusiness() {
 
                   <p>Let's break down how to actually build a remote team in 2026 without losing your mind (or your money).</p>
 
-                  <div className="bg-primary-50 border-l-4 border-primary-500 p-4 rounded-r-lg mt-6">
+                  <div className="bg-orange-50 border-l-4 border-[#ff5e00] p-4 rounded-r-lg mt-6">
                     <p className="text-gray-700 font-medium italic">"Hiring a VA isn't an expense. It's buying back the only asset you can't create more of—your time."</p>
                   </div>
                 </section>
@@ -261,15 +261,15 @@ export default function VirtualAssistantForSmallBusiness() {
                   <p>Think about it like this. If your time generates $100/hour for your business, and you spend 3 hours doing a $15/hour data entry task yourself... you didn't "save" $45. You actively <em>cost</em> your business $255 in lost revenue generation.</p>
 
                   <div className="bg-gray-900 rounded-[20px] p-8 text-white mb-8 border border-white/10 shadow-xl relative overflow-hidden not-prose">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-primary-500/10 rounded-full -mr-16 -mt-16"></div>
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-[#ff5e00]/10 rounded-full -mr-16 -mt-16"></div>
                     <h3 className="text-xl font-normal mb-4 relative z-10 text-white">The Math of Delegation:</h3>
                     <div className="grid sm:grid-cols-2 gap-8 relative z-10">
                       <div>
-                        <p className="text-primary-400 text-sm font-normal uppercase tracking-wider mb-1">Monthly Cost</p>
+                        <p className="text-[#ff5e00] text-sm font-normal uppercase tracking-wider mb-1">Monthly Cost</p>
                         <p className="text-3xl font-normal tracking-tight">$600 <span className="text-sm text-gray-400 font-normal">(40 hrs x $15/hr)</span></p>
                       </div>
                       <div>
-                        <p className="text-primary-400 text-sm font-normal uppercase tracking-wider mb-1">Founder's Value Created</p>
+                        <p className="text-[#ff5e00] text-sm font-normal uppercase tracking-wider mb-1">Founder's Value Created</p>
                         <p className="text-3xl font-normal tracking-tight">$2,000 <span className="text-sm text-gray-400 font-normal">(40 hrs x $50/hr min)</span></p>
                       </div>
                     </div>
@@ -470,7 +470,7 @@ export default function VirtualAssistantForSmallBusiness() {
                 <div className="space-y-4">
                   {relatedPosts.map((post, i) => (
                     <Link key={i} href={`/blog/${post.slug}`} className="group block">
-                      <h4 className="text-[14px] font-medium text-gray-900 group-hover:text-primary-600 transition-colors leading-snug">{post.title}</h4>
+                      <h4 className="text-[14px] font-medium text-gray-900 group-hover:text-[#ff5e00] transition-colors leading-snug">{post.title}</h4>
                       <span className="text-[12px] text-gray-400">{post.readTime}</span>
                     </Link>
                   ))}
@@ -502,14 +502,20 @@ export default function VirtualAssistantForSmallBusiness() {
               {relatedPosts.map((post, index) => (
                 <Link href={`/blog/${post.slug}`} key={index} className="group flex flex-col h-full">
                   <div className="relative aspect-[16/9] mb-4 overflow-hidden rounded-[12px] bg-gray-100">
-                    <div className="absolute inset-0 bg-primary-600/5 group-hover:bg-transparent transition-colors duration-500"></div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
                   </div>
                   <div className="mb-3">
-                    <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[12px] font-medium">Business</span>
+                    <span className="bg-gray-100 text-[#ff5e00] px-3 py-1 rounded-full text-[12px] font-medium">{post.category}</span>
                   </div>
                   <h3 className="text-[20px] font-normal text-gray-900 mb-4 group-hover:text-[#ff5e00] transition-colors leading-tight line-clamp-2">{post.title}</h3>
-                  <div className="mt-auto pt-4 flex items-center gap-4 text-[13px] text-gray-400 font-normal">
-                    <span>{post.date || "Feb 15, 2026"}</span>
+                  <div className="mt-auto pt-4 flex items-center gap-4 text-[13px] text-gray-400 font-normal border-t border-gray-50">
+                    <span>{post.date}</span>
                     <span className="w-[1px] h-3 bg-gray-200"></span>
                     <span>{post.readTime}</span>
                   </div>
@@ -527,14 +533,20 @@ export default function VirtualAssistantForSmallBusiness() {
               {[...relatedPosts].reverse().map((post, index) => (
                 <Link href={`/blog/${post.slug}`} key={index} className="group flex flex-col h-full">
                   <div className="relative aspect-[16/9] mb-4 overflow-hidden rounded-[12px] bg-gray-100">
-                    <div className="absolute inset-0 bg-primary-600/5 group-hover:bg-transparent transition-colors duration-500"></div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors duration-500"></div>
                   </div>
                   <div className="mb-3">
-                    <span className="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-[12px] font-medium">Strategy</span>
+                    <span className="bg-gray-100 text-[#ff5e00] px-3 py-1 rounded-full text-[12px] font-medium">{post.category}</span>
                   </div>
                   <h3 className="text-[20px] font-normal text-gray-900 mb-4 group-hover:text-[#ff5e00] transition-colors leading-tight line-clamp-2">{post.title}</h3>
-                  <div className="mt-auto pt-4 flex items-center gap-4 text-[13px] text-gray-400 font-normal">
-                    <span>{post.date || "Jan 20, 2026"}</span>
+                  <div className="mt-auto pt-4 flex items-center gap-4 text-[13px] text-gray-400 font-normal border-t border-gray-50">
+                    <span>{post.date}</span>
                     <span className="w-[1px] h-3 bg-gray-200"></span>
                     <span>{post.readTime}</span>
                   </div>

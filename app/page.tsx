@@ -30,8 +30,8 @@ export default function Home() {
   ]
 
   const quickStats = [
-    { number: "386+", label: "Projects Done", subtext: "Delivered on time" },
-    { number: "26+", label: "Happy Clients", subtext: "5-star rated" },
+    { number: "1578+", label: "Projects Done", subtext: "Delivered on time" },
+    { number: "226+", label: "Happy Clients", subtext: "5-star rated" },
     { number: "99.9%", label: "Success Rate", subtext: "Quality guaranteed" }
   ]
 
@@ -109,7 +109,7 @@ export default function Home() {
               Ready to Scale Your Business?
             </h2>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Join 26+ businesses already growing with TasksACE virtual assistant services.
+              Join 226+ businesses already growing with TasksACE virtual assistant services.
               Let's discuss how we can help your business thrive.
             </p>
 

@@ -443,7 +443,7 @@ export default function Header() {
                         <Link
                           href={service.href}
                           className="group flex items-center text-gray-600 hover:text-primary-600 transition-colors duration-200 py-0.5"
-                          onClick={() => setIsServicesDropdownOpen(false)}
+                          onClick={() => setActiveDropdown(null)}
                         >
                           <span className="text-sm font-medium">{service.label}</span>
                         </Link>
@@ -460,7 +460,7 @@ export default function Header() {
                 <Link
                   href="/services"
                   className="group flex items-center gap-2 text-primary-600 hover:text-primary-700 font-bold text-sm transition-colors"
-                  onClick={() => setIsServicesDropdownOpen(false)}
+                  onClick={() => setActiveDropdown(null)}
                 >
                   Explore all 20+ services
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -468,7 +468,7 @@ export default function Header() {
                 <Link
                   href="/contact"
                   className="group flex items-center gap-2 text-primary-600 hover:text-primary-700 font-bold text-sm transition-colors"
-                  onClick={() => setIsServicesDropdownOpen(false)}
+                  onClick={() => setActiveDropdown(null)}
                 >
                   Book free consultation
                   <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -496,7 +496,7 @@ export default function Header() {
                   key={link.href}
                   href={link.href}
                   className="group block p-6 rounded-2xl hover:bg-orange-50/50 transition-all duration-300 border border-transparent hover:border-orange-100"
-                  onClick={() => setIsCompanyDropdownOpen(false)}
+                  onClick={() => setActiveDropdown(null)}
                 >
                   <div className="flex items-start gap-5">
                     <div className="p-3.5 bg-orange-100 text-orange-600 rounded-xl group-hover:scale-105 transition-transform duration-300">

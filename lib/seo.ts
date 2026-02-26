@@ -21,6 +21,11 @@ export async function getSEOMetadata(path: string): Promise<SEOMetadata | null> 
     // Normalize path
     const normalizedPath = path === '/' ? '/' : path.replace(/\/$/, '')
 
+    if (!supabase) {
+        console.warn('Supabase client not initialized. Skipping SEO fetch.')
+        return null
+    }
+
     const { data, error } = await supabase
         .from('unified_seo')
         .select('*')
